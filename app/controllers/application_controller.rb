@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_skytap_credentials
-    RequestStore.store[:skytap_username] = 'mgoldman@spcapitaliq.com'
-    RequestStore.store[:skytap_api_token] = '68a23c6a5101225f6f43db27050896e6580cbc20'
+    RequestStore.store[:skytap_username] = current_user.settings[:skytap_username]
+    RequestStore.store[:skytap_api_token] = current_user.settings[:skytap_api_token]
   end
 end

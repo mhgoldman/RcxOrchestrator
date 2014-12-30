@@ -1,11 +1,24 @@
 class RcxClientProvider
-	attr_reader :clients
+	cattr_reader :user_settings, :display_name
 
-	def get_clients
+	def initialize
+		raise "#{self.class} cannot be instantiated"
+	end
+
+	def self.get_clients
 		raise 'Not implemented'
 	end
 
-	def initialize
-		@clients = get_clients
+	private
+
+	def self.uses_user_setting(*args)
+		instance_eval do
+			@@user_settings ||= []
+			@@user_settings |= args
+		end
+	end
+
+	def self.has_display_name(name)
+		instance_eval { @@display_name = name }
 	end
 end

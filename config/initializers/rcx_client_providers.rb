@@ -1,0 +1,1 @@
+RcxOrchestrator::Application.config.rcx_client_providers = [ :skytap_user_configs_rcx_client_provider, :skytap_project_configs_rcx_client_provider ]

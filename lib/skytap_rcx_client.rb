@@ -33,6 +33,12 @@ class SkytapRcxClient < RcxClient
 	private
 
 	def get_skytap_vm
+		# Note: we don't store this in an instance variable because the VM status could easily change...
 		Skytap::Vm.find(@skytap_vm_id, configuration_url: @skytap_config_url)
 	end
 end
+
+# ON THE TRAIN...
+# Store client list in a JSON column in the users table!
+# user.update_clients?
+# Need an initializer or a global or something to store an array of ClientProviders

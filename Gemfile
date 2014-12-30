@@ -43,10 +43,39 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'devise', '~> 3.4.1'
+gem 'simple_token_authentication', '~> 1.0'
+gem 'pundit'
+
+gem 'figaro', '1.0'
+
+group :development, :test do
+        gem 'rspec-rails'
+        gem 'capybara'
+end
+
+group :test do
+        gem 'email_spec'
+        gem 'database_cleaner'
+        gem 'factory_girl_rails', '~> 4.0'
+        gem 'poltergeist'
+        gem 'shoulda-matchers', require: false
+end
+
+
+gem 'bootstrap-sass', '~> 3.1.1'
+
+gem 'toastr-rails'
+
+gem 'jquery-turbolinks'
+
+gem 'x-editable-rails'
+
+gem 'active_model_serializers', '~> 0.8.0'
+
 gem 'her'
-
 gem 'rest-client'
-
 gem 'request_store'
 
-gem 'httplog'
+gem 'httplog', group: :development
+

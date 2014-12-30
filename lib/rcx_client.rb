@@ -1,19 +1,14 @@
 class RcxClient
 	attr_reader :display_name
-	attr_reader :agent_endpoint
+	attr_reader :agent_endpoint_url	
 
 	def initialize(opts={})
+		raise "#{self.class} cannot be directly instantiated" if self.class == RcxClient
 		@display_name = opts[:display_name]
-		@agent_endpoint = RestClient::Resource.new(opts[:agent_endpoint_url])
+		@agent_endpoint_url = opts[:agent_endpoint_url]
 	end
 
-	def listening?
-		begin
-			@agent_endpoint['/ping'].get.downcase.include?('pong')
-		rescue
-			false
-		end
-	end
+	### "Abstract" Methods
 
 	def up?
 		raise 'Not implemented'
@@ -26,12 +21,27 @@ class RcxClient
 	def awaken!
 		raise 'Not implemented'
 	end
+
+	### RCX Agent Methods
+
+	def listening?
+		begin
+			agent_endpoint['/ping'].get.downcase.include?('pong')
+		rescue
+			false
+		end
+	end
+
+	#TODO: Can we share objects with the agent? (Do we want to?)
+	def create_command(cmd, args)
+	end
+
+	def command_status(guid)
+	end
+
+	private
+
+	def agent_endpoint
+		RestClient::Resource.new(@agent_endpoint_url)
+	end
 end
-
-#TODO - Should this be a model from which SkytapRcxClient inherits?
-#The user's list of available RcxClients is generated when he logs in, and also when he manually refreshes the list.
-#When that happens, we call into all of his selected RcxClientProviders, generate the list, and store it.
-#We then use the list to render the list of machines. But we'll also want to reference the items in the list by ID 
-#later on. So yes, this should probably be a model.
-
-#User HAS_MANY RcxClientProviders
