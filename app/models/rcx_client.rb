@@ -10,6 +10,7 @@ class RcxClient < ActiveRecord::Base
 		new_clients = RcxClient.fetch_for_user(user)
 		user.rcx_clients.destroy_all
 		RcxClient.import new_clients
+		user.rcx_clients.reload
 	end
 
 	### "Abstract" (platform specific) Methods
