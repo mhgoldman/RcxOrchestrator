@@ -73,9 +73,16 @@ gem 'x-editable-rails'
 
 gem 'active_model_serializers', '~> 0.8.0'
 
-gem 'her'
 gem 'rest-client'
-gem 'request_store'
 
 gem 'httplog', group: :development
+
+gem 'activerecord-import'
+
+# RcxSkytap
+gem 'her'
+gem 'request_store'
+
+
+
 

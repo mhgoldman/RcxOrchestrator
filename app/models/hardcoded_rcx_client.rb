@@ -9,11 +9,11 @@ class HardcodedRcxClient < RcxClient
 		true
 	end
 	
-	def self.all
-		client_list = [ 
-			HardcodedRcxClient.new(display_name: "My Parallels VM", agent_endpoint_url: "http://10.211.55.3:8789/")
+	private
+	
+	def self.fetch_for_user(user)
+		[ 
+			HardcodedRcxClient.new(display_name: "My Parallels VM", agent_endpoint_url: "http://10.211.55.3:8789/", user: user)
 		]
-
-		client_list
 	end	
 end
