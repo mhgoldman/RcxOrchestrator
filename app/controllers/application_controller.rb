@@ -3,14 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  # before_filter :set_skytap_credentials
+  # Can't do anything in this app without authentication!
+  before_filter :authenticate_user!
 
-  # protected
 
-  # def set_skytap_credentials
-  # 	if user_signed_in?
-	 #    RequestStore.store[:skytap_username] = current_user.skytap_username
-	 #    RequestStore.store[:skytap_api_token] = current_user.skytap_api_token
-	 #   end
-  # end
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit([:email, :current_password, :password, :password_confirmation] | User.rcx_user_attributes ) } 
+  end
 end

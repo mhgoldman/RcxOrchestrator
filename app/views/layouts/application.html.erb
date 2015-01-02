@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RcxOrchestrator</title>
+  <title>RCX Orchestrator</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= api_meta_tags %>
 </head>
 <body>
+<div class="container">
+	<%= render 'shared/nav' %>
+	<div id="flashes">
+		<%= render 'shared/flashes' %>
+	</div>
+	
+	<%= yield %>
 
-<%= yield %>
-
+</div>
 </body>
 </html>

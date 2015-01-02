@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141231151413) do
+ActiveRecord::Schema.define(version: 20150101223110) do
 
   create_table "rcx_clients", force: :cascade do |t|
     t.integer  "user_id"
@@ -44,8 +44,9 @@ ActiveRecord::Schema.define(version: 20141231151413) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "skytap_username"
-    t.string   "skytap_api_token"
+    t.string   "rcx_skytap_username"
+    t.string   "rcx_skytap_api_token"
+    t.string   "authentication_token"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

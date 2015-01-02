@@ -1,0 +1,23 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
+@import "toastr";
+@import "bootstrap";
+@import "editable/bootstrap-editable";
+
+.form-field-error {
+	  color: #a94442;	
+	  display: inline;
+}
+
+.alert {
+	margin-top: 10px;
+}
+
+.nav-tabs	 {
+	margin-top: 10px;
+}
+
+
