@@ -1,0 +1,22 @@
+<%= form_for command, authenticity_token: true do |form| %>
+	<div class="field form-group required">
+		<%= form.label :name %><br/>
+		<%= form.text_field :name, placeholder: 'Name', size: 60, autofocus: true %>
+	</div>
+	<div class="field form-group">
+		<%= form.label :description %><br/>
+		<%= form.text_area :description, placeholder: 'Description', rows: 3, cols: 80 %>
+	</div>
+	<div class="field form-group required">
+		<%= form.label :path %><br/>
+		<%= form.text_field :path, placeholder: 'Path', size: 60 %>
+	</div>
+	<div class="field form-group">
+		<%= form.label :args, 'Arguments' %><br/>
+		<%= form.text_field :args, placeholder: 'Arguments', size: 60 %>
+	</div>		
+	<div class="field form-group">
+		<%= form.submit 'Save', class: "btn btn-default" %> or 
+		<%= link_to 'Cancel', command.new_record? ? commands_path : command_path %>
+	</div>
+<% end %>

@@ -65,8 +65,8 @@ end
 group :test do
         gem 'email_spec'
         gem 'database_cleaner'
-        gem 'factory_girl_rails', '~> 4.0'
         gem 'poltergeist'
+        gem 'factory_girl_rails', '~> 4.0'                
         gem 'shoulda-matchers', require: false
 end
 

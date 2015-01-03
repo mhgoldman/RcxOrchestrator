@@ -20,4 +20,18 @@
 	margin-top: 10px;
 }
 
+.form-group.required label:after { 
+    color: #d00;
+    content: "*";
+}
 
+.attribute {
+	margin-bottom: 15px;
+
+	.attribute-name {
+		display: inline;
+		max-width: 100%;
+		margin-bottom: 5px;
+		font-weight: bold;	
+	}
+}

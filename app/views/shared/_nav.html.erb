@@ -13,9 +13,10 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">       
+      <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li><%= nav_link 'My Lists', '#' %></li>
+          <li><%= nav_link 'Dashboard', dashboard_path %></li>
+          <li><%= nav_link 'Commands', commands_path %></li>
         <% end %>
 
       </ul>

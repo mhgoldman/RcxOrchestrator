@@ -3,15 +3,19 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  # Can't do anything in this app without authentication!
-  before_filter :authenticate_user!
+  before_action :authenticate_user!, unless: :welcome_controller?
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  acts_as_token_authentication_handler_for User, fallback_to_devise: false
 
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit([:email, :current_password, :password, :password_confirmation] | User.rcx_user_attributes ) } 
+  end
+
+  def welcome_controller?
+    controller_name == 'welcome'
   end
 end

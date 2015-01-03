@@ -1,8 +1,14 @@
 module ApplicationHelper
 	def nav_link(link_text, link_path, params={})
-		if link_text == 'Sign Up' && controller.controller_name == 'confirmations'
-			current_page = true
-		elsif link_text=='Log In' && ['passwords','unlocks'].include?(controller.controller_name)
+		controller_map = {
+			'confirmations' => 'Sign Up',
+			'passwords' => 'Log In',
+			'unlocks' => 'Log In',
+			'commands' => 'Commands',
+			'dashboard' => 'Dashboard'
+		}
+		
+		if link_text == controller_map[controller.controller_name]
 			current_page = true
 		else
 			current_page = current_page?(link_path)
@@ -29,5 +35,9 @@ module ApplicationHelper
 
   def humanize_user_attribute_name(attribute)
   	attribute.to_s.gsub(/^rcx_/,"").humanize
+  end
+
+  def print_blankable(str)
+  	str && !str.blank? ? str : "<em>n/a</em>".html_safe
   end
 end

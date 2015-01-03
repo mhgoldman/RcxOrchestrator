@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150101223110) do
+ActiveRecord::Schema.define(version: 20150102144951) do
+
+  create_table "commands", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "path"
+    t.string   "args"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "rcx_clients", force: :cascade do |t|
     t.integer  "user_id"

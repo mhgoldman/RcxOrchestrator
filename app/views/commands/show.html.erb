@@ -1,0 +1,17 @@
+<h2><%= @command.name %></h2>
+<%= render 'shared/errors', obj: @command %>
+
+<div class="attribute">
+	<div class="attribute-name">Description</div>
+	<div class="attribute-value"><%= print_blankable(@command.description) %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Path</div>
+	<div class="attribute-value"><%= @command.path %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Arguments</div>
+	<div class="attribute-value"><%= @command.args %></div>
+</div>
+
+<%= link_to 'Edit', edit_command_path(@command) %>
