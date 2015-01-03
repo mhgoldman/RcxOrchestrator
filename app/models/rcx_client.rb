@@ -1,4 +1,6 @@
 class RcxClient < ActiveRecord::Base
+	has_and_belongs_to_many :batches	
+	has_many :step_instances, dependent: :destroy
 	belongs_to :user
 	validates :user, presence: true
 

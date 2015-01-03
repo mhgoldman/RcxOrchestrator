@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable, :timeoutable
 
+  has_many :batches, dependent: :destroy
+
   has_many :rcx_clients do
   	def fetch!
   		RcxClient.fetch_for_user!(self.proxy_association.owner)

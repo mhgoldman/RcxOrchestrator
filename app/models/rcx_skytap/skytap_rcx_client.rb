@@ -33,9 +33,11 @@ class RcxSkytap::SkytapRcxClient < RcxClient
 	end
 
 	def self.fetch_for_user(user)
+		return [] if user.rcx_skytap_username.blank? || user.rcx_skytap_api_token.blank?
+		
 		# This is the only way I can figure out how to get the credentials into Her for basic auth
-    RequestStore.store[:skytap_username] = user.skytap_username
-    RequestStore.store[:skytap_api_token] = user.skytap_api_token
+    RequestStore.store[:skytap_username] = user.rcx_skytap_username
+    RequestStore.store[:skytap_api_token] = user.rcx_skytap_api_token
 
 		client_list = []
 
