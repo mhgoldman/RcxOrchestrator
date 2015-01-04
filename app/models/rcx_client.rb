@@ -2,6 +2,7 @@ class RcxClient < ActiveRecord::Base
 	has_and_belongs_to_many :batches	
 	has_many :step_instances, dependent: :destroy
 	belongs_to :user
+
 	validates :user, presence: true
 
 	class << self
@@ -33,7 +34,7 @@ class RcxClient < ActiveRecord::Base
 
 	def listening?
 		begin
-			agent_endpoint['/ping'].get.downcase.include?('pong')
+			agent_endpoint['Rcx/ping'].get.downcase.include?('pong')
 		rescue
 			false
 		end
@@ -41,10 +42,16 @@ class RcxClient < ActiveRecord::Base
 
 	### TODO
 
-	def create_command(cmd, args)
+	def invoke_command(command)
+		path = command.path
+		args = command.args.is_a?(String) ? command.args.split : args 
+		invoke_result_json = agent_endpoint['Rcx/commands'].post({path: path, args: args}.to_json, content_type: :json)
+		JSON.parse(invoke_result_json)
 	end
 
 	def command_status(guid)
+		invoke_result_json = agent_endpoint["Rcx/commands/#{guid}"].get
+		JSON.parse(invoke_result_json)		
 	end
 
 	private
@@ -67,6 +74,6 @@ class RcxClient < ActiveRecord::Base
 	end
 
 	def agent_endpoint
-		RestClient::Resource.new(@agent_endpoint_url)
+		RestClient::Resource.new(agent_endpoint_url)
 	end
 end

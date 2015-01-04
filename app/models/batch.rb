@@ -1,9 +1,16 @@
 class Batch < ActiveRecord::Base
-	validates :name, presence: true
 	belongs_to :user
-	validates :user, presence: true
 	has_and_belongs_to_many :rcx_clients
 	has_many :steps, dependent: :destroy
+
+	validates :name, presence: true
+	validates :user, presence: true
+
+	def start
+		steps.first.step_instances.each do |step_instance|
+			StepInstanceJob.perform_later step_instance
+		end
+	end
 
 	def generate_step_instances
 		# call immediately prior to beginning the batch

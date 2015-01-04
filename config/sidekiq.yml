@@ -1,0 +1,8 @@
+---
+:concurrency: 25
+:pidfile: ./tmp/pids/sidekiq.pid
+:logfile: ./log/sidekiq.log
+:queues:
+  - rcx_commands
+  - [frontend_requests, 2]
+:daemon: true

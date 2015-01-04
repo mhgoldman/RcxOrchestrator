@@ -87,9 +87,13 @@ gem 'httplog', group: :development
 
 gem 'activerecord-import'
 
+gem 'sidekiq'
+gem 'sinatra', :require => nil
+
 # RcxSkytap
 gem 'her'
 gem 'request_store'
+
 
 
 
