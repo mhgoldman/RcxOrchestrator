@@ -1,0 +1,9 @@
+<h2><%= @batch.name %></h2>
+
+Status: <%= status_for(@batch) %>
+
+<h3>Clients</h3>
+<%= render 'rcx_clients/rcx_clients_list', rcx_clients: @batch.rcx_clients %>
+
+<h3>Steps</h3>
+<%= render 'steps/steps_list', steps: @batch.steps %>

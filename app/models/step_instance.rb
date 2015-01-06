@@ -13,7 +13,8 @@ class StepInstance < ActiveRecord::Base
 		raise 'Not yet started' unless started?
 
 		result = rcx_client.command_status(self.client_guid)
-		update_from_client_result(result)		
+		update_from_client_result(result)
+		self
 	end
 
 	def started?
@@ -29,7 +30,8 @@ class StepInstance < ActiveRecord::Base
 	end
 
 	def next_step_instance
-		step.batch.steps.find_by(index: step.index+1)
+		next_step_in_batch = step.batch.steps.find_by(index: step.index + 1)
+		StepInstance.find_by(rcx_client: rcx_client, step_id: next_step_in_batch)
 	end
 
 	def reset_status

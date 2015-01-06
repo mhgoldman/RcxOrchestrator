@@ -1,0 +1,24 @@
+<h3><%= @step.command.name %> Instances</h3>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Client</th>
+			<th>Status</th>
+			<th>Exit Code</th>
+			<th>Standard Output</th>
+			<th>Standard Error</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @step_instances.each do |step_instance| %>
+			<tr>
+				<td><%= step_instance.rcx_client.display_name %></td>
+				<td><%= status_for(step_instance) %></td>
+				<td><%= step_instance.exit_code %></td>
+				<td><%= step_instance.standard_output %></td>
+				<td><%= step_instance.standard_error %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

@@ -1,0 +1,18 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Display Name</th>
+			<th>Agent Endpoint</th>
+			<th>Source</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% rcx_clients.each do |rcx_client| %>
+			<tr>
+				<td><%= rcx_client.display_name %></td>
+				<td><%= rcx_client.agent_endpoint_url %></td>
+				<td><%= rcx_client.class.display_name %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

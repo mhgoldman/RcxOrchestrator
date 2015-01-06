@@ -5,4 +5,4 @@
 :queues:
   - rcx_commands
   - [frontend_requests, 2]
-:daemon: true
+#:daemon: true

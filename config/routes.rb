@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :step_instances
+
+  resources :steps
+
+  resources :rcx_clients, only: :index
+
+  get 'rcx_clients' => 'rcx_clients#index'
+  post 'rcx_clients' => 'rcx_clients#start_client_update'
+
   resources :batches
 
   get 'welcome/index'
@@ -7,7 +16,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get '/dashboard', to: 'dashboard#index'
+  get '/dashboard' => 'dashboard#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

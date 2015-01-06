@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
   	def fetch!
   		RcxClient.fetch_for_user!(self.proxy_association.owner)
   	end
+
+    def fetching?
+      self.proxy_association.owner.clients_update_finished_at.nil?
+    end
   end
 
   def self.rcx_user_attributes

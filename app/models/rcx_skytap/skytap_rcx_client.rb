@@ -29,28 +29,34 @@ class RcxSkytap::SkytapRcxClient < RcxClient
 
 	def get_skytap_vm
 		# Note: we don't store this in an instance variable because the VM statuses change all the time. We always need a fresh copy.
-		RcxSkytap::Skytap::Vm.find(@skytap_vm_id, configuration_url: @skytap_config_url)
+
+		set_skytap_credentials
+
+		RcxSkytap::Skytap::Vm.find(skytap_vm_id, configuration_url: skytap_config_url)
 	end
 
 	def self.fetch_for_user(user)
 		return [] if user.rcx_skytap_username.blank? || user.rcx_skytap_api_token.blank?
 		
-		# This is the only way I can figure out how to get the credentials into Her for basic auth
-    RequestStore.store[:skytap_username] = user.rcx_skytap_username
-    RequestStore.store[:skytap_api_token] = user.rcx_skytap_api_token
+		set_skytap_credentials
 
-		client_list = []
+		vms = []
 
 		RcxSkytap::Skytap::Configuration.all.fetch.each do |config|
-			client_list |= config.vms.map { |vm| vm.to_skytap_rcx_client_for_user(user) }
+			vms |= config.vms
 		end
 
 		RcxSkytap::Skytap::Project.all.fetch.each do |project|
 			project.configurations.each do |config|
-				client_list |= config.vms.map { |vm| vm.to_skytap_rcx_client_for_user(user) }
+				vms |= config.vms
 			end
 		end
 
-		client_list
+		vms.uniq {|vm| vm.id }.map { |vm| vm.to_skytap_rcx_client_for_user(user) }
 	end	
+
+	def set_skytap_credentials
+    RequestStore.store[:skytap_username] = user.rcx_skytap_username
+    RequestStore.store[:skytap_api_token] = user.rcx_skytap_api_token		
+   end
 end

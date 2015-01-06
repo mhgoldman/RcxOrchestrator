@@ -1,0 +1,20 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Index</th>
+			<th>Command</th>
+			<th>Status</th>
+			<th/>
+		</tr>
+	</thead>
+	<tbody>
+		<% steps.each do |step| %>
+			<tr>
+				<td><%= step.index %></td>
+				<td><%= link_to step.command.name, step.command %></td>
+				<td><%= status_for(step) %></td>
+				<td><%= link_to 'Instances', step_instances_path(step_id: step) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

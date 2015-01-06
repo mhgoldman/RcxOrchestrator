@@ -9,6 +9,9 @@ class HardcodedRcxClient < RcxClient
 		true
 	end
 	
+	def awaken!
+	end
+	
 	private
 	
 	def self.fetch_for_user(user)

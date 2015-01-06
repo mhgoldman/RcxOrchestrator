@@ -5,15 +5,16 @@ class RcxClient < ActiveRecord::Base
 
 	validates :user, presence: true
 
+	validates :agent_endpoint_url, uniqueness: { scope: [:display_name, :user, :type] }
+
 	class << self
 		attr_reader :display_name
 	end
 
 	def self.fetch_for_user!(user)
 		new_clients = RcxClient.fetch_for_user(user)
-		user.rcx_clients.destroy_all
-		RcxClient.import new_clients
-		user.rcx_clients.reload
+		user.rcx_clients = new_clients
+		user.save
 	end
 
 	### "Abstract" (platform specific) Methods
@@ -40,8 +41,6 @@ class RcxClient < ActiveRecord::Base
 		end
 	end
 
-	### TODO
-
 	def invoke_command(command)
 		path = command.path
 		args = command.args.is_a?(String) ? command.args.split : args 
@@ -61,13 +60,28 @@ class RcxClient < ActiveRecord::Base
 	end
 
 	def self.fetch_for_user(user)
+		# algorithm: for each client in the new list, see if there's an existing RcxClient object that seems to represent the same client.
+		# if so, keep the old one. if not, use the new one. clients that were on the old list but not on the new one will go away.
+		# we have to do all this to ensure that existing clients' IDs don't change, as would screw up the database foreign keys and stuff.
 		client_list = []
 
-		# TODO: Need to do something about exceptions here. If one of the clienttypes breaks, that breaks the whole loop
 		RcxOrchestrator::Application.config.rcx_client_types.each do |client_type|
-			client_type_class = client_type.to_s.camelize.constantize
-			clients_for_this_type = client_type_class.fetch_for_user(user)
-			client_list |= clients_for_this_type
+			old_clients = user.rcx_clients
+
+			client_type_class_name = client_type.to_s.camelize
+			client_type_class = client_type_class_name.constantize
+
+			#begin
+				clients_for_this_type = client_type_class.fetch_for_user(user)
+				clients_for_this_type.each do |new_client|
+					old_client = old_clients.find_by(display_name: new_client.display_name, agent_endpoint_url: new_client.agent_endpoint_url, type: client_type_class_name)
+					client_list << (old_client || new_client)
+				end
+			#rescue
+				#If an exception occurs while fetching clients of this type, just keep the old list of clients of this type.
+				#TODO LOG ME!!
+				#client_list |= old_clients
+			#end
 		end
 
 		client_list

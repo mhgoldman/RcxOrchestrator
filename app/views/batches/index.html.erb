@@ -1,0 +1,18 @@
+<h2>My Batches</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Created At</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @batches.each do |batch| %>
+			<tr>
+				<td><%= link_to batch.name, batch %></td>
+				<td><%= batch.created_at %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

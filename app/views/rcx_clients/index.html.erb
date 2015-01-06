@@ -1,0 +1,12 @@
+<h2>My Clients</h2>
+
+<div class="last-update">
+	Last Update: 
+	<% if @rcx_clients.fetching? %>
+		In Progress
+	<% else %>
+		<%= current_user.clients_update_finished_at %> <%= button_to 'Update Now', '/rcx_clients', method: :post %>
+	<% end %>
+</div>
+
+<%= render 'rcx_clients_list', rcx_clients: @rcx_clients %>
