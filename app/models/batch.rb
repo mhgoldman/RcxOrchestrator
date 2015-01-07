@@ -1,16 +1,16 @@
 class Batch < ActiveRecord::Base
 	belongs_to :user
 	has_and_belongs_to_many :rcx_clients
-	has_many :steps, dependent: :destroy
+	has_many :batch_commands, dependent: :destroy
 
 	validates :name, presence: true
 	validates :user, presence: true
 
 	def start
-		generate_step_instances
+		generate_client_batch_commands
 
-		steps.first.step_instances.each do |step_instance|
-			StepInstanceJob.perform_later step_instance
+		batch_commands.first.client_batch_commands.each do |client_batch_command|
+			ClientBatchCommandJob.perform_later client_batch_command
 		end
 	end
 
@@ -20,19 +20,19 @@ class Batch < ActiveRecord::Base
 	end
 
 	def finished_for_rcx_client?(rcx_client)
-		statuses = rcx_client_step_instances_count_by_status(rcx_client)
-		statuses[:finished] == steps.count || statuses[:error] > 0
+		statuses = rcx_client_client_batch_commands_count_by_status(rcx_client)
+		statuses[:finished] == batch_commands.count || statuses[:error] > 0
 	end	
 
-	def step_instances_by_rcx_client(rcx_client)
-		steps.map {|step| StepInstance.find_by(step: step, rcx_client: rcx_client) }
+	def client_batch_commands_by_rcx_client(rcx_client)
+		batch_commands.map {|batch_command| ClientBatchCommand.find_by(batch_command: batch_command, rcx_client: rcx_client) }
 	end
 
-	def rcx_client_step_instances_count_by_status(rcx_client)
+	def rcx_client_client_batch_commands_count_by_status(rcx_client)
 		counts = {}
-		StepInstance::STATUSES.each do |status|
-			step_instances = step_instances_by_rcx_client(rcx_client)
-			counts[status] = step_instances.select {|si| si.status == status }.count
+		ClientBatchCommand::STATUSES.each do |status|
+			client_batch_commands = client_batch_commands_by_rcx_client(rcx_client)
+			counts[status] = client_batch_commands.select {|si| si.status == status }.count
 		end
 
 		counts		
@@ -40,12 +40,12 @@ class Batch < ActiveRecord::Base
 
 	private
 	
-	def generate_step_instances
+	def generate_client_batch_commands
 		# call immediately prior to beginning the batch
-		steps.each do |step|
-			step.step_instances.destroy_all				
+		batch_commands.each do |batch_command|
+			batch_command.client_batch_commands.destroy_all				
 			rcx_clients.each do |rcx_client|
-				step.step_instances.create(rcx_client: rcx_client)
+				batch_command.client_batch_commands.create(rcx_client: rcx_client)
 			end
 		end
 	end

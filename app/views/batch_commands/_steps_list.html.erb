@@ -1,0 +1,18 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Index</th>
+			<th>Command</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% batch_commands.each do |batch_command| %>
+			<tr>
+				<td><%= batch_command.index %></td>
+				<td><%= link_to batch_command.command.name, batch_command.command %></td>
+				<td><%= link_to step_status_for(batch_command), client_batch_commands_path(batch_command_id: batch_command) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

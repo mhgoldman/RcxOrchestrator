@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20150106135735) do
 
+  create_table "batch_commands", force: :cascade do |t|
+    t.integer  "batch_id"
+    t.integer  "command_id"
+    t.integer  "index"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "batches", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
@@ -27,6 +35,19 @@ ActiveRecord::Schema.define(version: 20150106135735) do
 
   add_index "batches_rcx_clients", ["batch_id"], name: "index_batches_rcx_clients_on_batch_id"
   add_index "batches_rcx_clients", ["rcx_client_id"], name: "index_batches_rcx_clients_on_rcx_client_id"
+
+  create_table "client_batch_commands", force: :cascade do |t|
+    t.integer  "rcx_client_id"
+    t.integer  "batch_command_id"
+    t.string   "client_guid"
+    t.text     "standard_output"
+    t.text     "standard_error"
+    t.boolean  "has_exited"
+    t.integer  "exit_code"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "error"
+  end
 
   create_table "commands", force: :cascade do |t|
     t.string   "name"
@@ -46,27 +67,6 @@ ActiveRecord::Schema.define(version: 20150106135735) do
     t.string   "skytap_config_url"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-  end
-
-  create_table "step_instances", force: :cascade do |t|
-    t.integer  "rcx_client_id"
-    t.integer  "step_id"
-    t.string   "client_guid"
-    t.text     "standard_output"
-    t.text     "standard_error"
-    t.boolean  "has_exited"
-    t.integer  "exit_code"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "error"
-  end
-
-  create_table "steps", force: :cascade do |t|
-    t.integer  "batch_id"
-    t.integer  "command_id"
-    t.integer  "index"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

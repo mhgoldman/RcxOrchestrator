@@ -1,13 +1,13 @@
-class StepInstance < ActiveRecord::Base
+class ClientBatchCommand < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :error]
 
-	belongs_to :step
+	belongs_to :batch_command
 	belongs_to :rcx_client
 
 	def start!
 		raise 'Already started' if started?
 
-		result = rcx_client.invoke_command(step.command)
+		result = rcx_client.invoke_command(batch_command.command)
 		update_from_client_result(result)
 	end
 
@@ -52,9 +52,9 @@ class StepInstance < ActiveRecord::Base
 		result == :failed
 	end
 
-	def next_step_instance
-		next_step_in_batch = step.batch.steps.find_by(index: step.index + 1)
-		StepInstance.find_by(rcx_client: rcx_client, step_id: next_step_in_batch)
+	def next_client_batch_command
+		next_step_in_batch = batch_command.batch.batch_commands.find_by(index: batch_command.index + 1)
+		ClientBatchCommand.find_by(rcx_client: rcx_client, batch_command_id: next_step_in_batch)
 	end
 
 	def reset_status

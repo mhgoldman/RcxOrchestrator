@@ -1,0 +1,41 @@
+
+<h3>
+<% if @batch_command %>
+	<%= link_to @batch.name, @batch %> &gt; <%= @batch_command.index %>. <%= @command.name %>
+<% else %>
+	<%= link_to @batch.name, @batch %> &gt; <%= @rcx_client.display_name %>
+<% end %>
+</h3>
+
+<table class="table">
+	<thead>
+		<tr>
+			<% if @batch_command %>
+				<th>Client</th>
+			<% else %>
+				<th>Index</th>
+					<th>Command</th>
+			<% end %>
+			<th>Status</th>
+			<th>Exit Code</th>
+			<th>Standard Output</th>
+			<th>Standard Error</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @client_batch_commands.each do |client_batch_command| %>
+			<tr>
+				<% if @batch_command %>				
+					<td><%= client_batch_command.rcx_client.display_name %></td>
+				<% else %>
+					<td><%= client_batch_command.batch_command.index %></td>
+					<td><%= link_to client_batch_command.batch_command.command.name, client_batch_command.batch_command.command %></td>
+				<%end %>
+				<td><%= client_batch_command.status %></td>
+				<td><%= client_batch_command.exit_code %></td>
+				<td><%= client_batch_command.standard_output %></td>
+				<td><%= client_batch_command.standard_error %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

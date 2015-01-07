@@ -1,9 +1,10 @@
-<table class="table">
+<p id="no_rcx_clients_msg"<%= ' style="display: none;"'.html_safe if rcx_clients.any? %>>There are no clients.</p>
+<table class="table" id="rcx_clients_table" <%= ' style="display: none;"'.html_safe unless rcx_clients.any? %>>
 	<thead>
 		<tr>
 			<th>Display Name</th>
 			<th>Source</th>
-			<% if @batch %>
+			<% if defined?(batch) %>
 				<th>Status</th>
 			<% end %>
 		</tr>
@@ -13,8 +14,8 @@
 			<tr>
 				<td><%= rcx_client.display_name %></td>
 				<td><%= rcx_client.class.display_name %></td>
-				<% if @batch %>				
-					<td><%= link_to batch_rcx_client_status_for(@batch, rcx_client), step_instances_path(batch_id: @batch, rcx_client_id: rcx_client) %></td>
+				<% if defined?(batch) %>				
+					<td><%= link_to batch_rcx_client_status_for(batch, rcx_client), client_batch_commands_path(batch_id: @batch, rcx_client_id: rcx_client) %></td>
 				<% end %>
 			</tr>
 		<% end %>

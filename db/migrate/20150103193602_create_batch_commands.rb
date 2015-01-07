@@ -1,6 +1,6 @@
-class CreateSteps < ActiveRecord::Migration
+class CreateBatchCommands < ActiveRecord::Migration
   def change
-    create_table :steps do |t|
+    create_table :batch_commands do |t|
       t.integer :batch_id
       t.integer :command_id
       t.integer :index

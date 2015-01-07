@@ -8,7 +8,8 @@ class FetchRcxClientsJob < ActiveJob::Base
 
   around_perform do |job, block|
   	user = job.arguments.first
-  	raise "FetchRcxClients already in progress for #{user}" if user.clients_update_finished_at.nil? && user.clients_update_started_at <= MAX_DURATION.ago
+  	raise "FetchRcxClients already in progress for #{user}" if user.clients_update_finished_at.nil? && 
+      (!user.clients_update_started_at.nil? && user.clients_update_started_at <= MAX_DURATION.ago)
 
   	user.update(clients_update_started_at: Time.now, clients_update_finished_at: nil)
 

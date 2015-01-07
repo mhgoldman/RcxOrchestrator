@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :step_instances
+  resources :client_batch_commands
 
-  resources :steps
+  resources :batch_commands
 
   resources :rcx_clients, only: :index
 

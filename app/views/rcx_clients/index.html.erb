@@ -5,7 +5,8 @@
 	<% if @rcx_clients.fetching? %>
 		In Progress
 	<% else %>
-		<%= current_user.clients_update_finished_at %> <%= button_to 'Update Now', '/rcx_clients', method: :post %>
+		<% last_update = current_user.clients_update_started_at.nil? ? "Never" : current_user.clients_update_finished_at %>
+		<%= last_update %> <%= button_to 'Update Now', '/rcx_clients', method: :post %>
 	<% end %>
 </div>
 

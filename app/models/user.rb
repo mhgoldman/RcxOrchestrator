@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   	end
 
     def fetching?
-      self.proxy_association.owner.clients_update_finished_at.nil?
+      self.proxy_association.owner.clients_update_finished_at.nil? && !self.proxy_association.owner.clients_update_started_at.nil?
     end
   end
 

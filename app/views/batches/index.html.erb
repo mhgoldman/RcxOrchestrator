@@ -1,6 +1,7 @@
 <h2>My Batches</h2>
 
-<table class="table">
+<p id="no_batches_msg"<%= ' style="display: none;"'.html_safe if @batches.any? %>>There are no batches.</p>
+<table class="table" id="batches_table" <%= ' style="display: none;"'.html_safe unless @batches.any? %>>
 	<thead>
 		<tr>
 			<th>Name</th>
