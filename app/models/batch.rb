@@ -10,7 +10,7 @@ class Batch < ActiveRecord::Base
 		generate_client_batch_commands
 
 		batch_commands.first.client_batch_commands.each do |client_batch_command|
-			ClientBatchCommandJob.perform_later client_batch_command
+			AwakenJob.perform_later client_batch_command
 		end
 	end
 

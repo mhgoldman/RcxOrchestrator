@@ -19,14 +19,6 @@ class RcxClient < ActiveRecord::Base
 
 	### "Abstract" (platform specific) Methods
 
-	def up?
-		raise 'Not implemented'
-	end
-
-	def authorized?
-		raise 'Not implemented'
-	end
-
 	def awaken!
 		raise 'Not implemented'
 	end

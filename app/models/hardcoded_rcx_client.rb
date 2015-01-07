@@ -1,13 +1,5 @@
 class HardcodedRcxClient < RcxClient
 	has_display_name "Hardcoded VMs"	
-
-	def up?
-		true
-	end
-
-	def authorized?
-		true
-	end
 	
 	def awaken!
 	end

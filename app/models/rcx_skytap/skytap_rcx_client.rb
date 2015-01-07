@@ -1,16 +1,6 @@
 class RcxSkytap::SkytapRcxClient < RcxClient
 	has_display_name "Skytap VMs"	
 
-	def up?
-		skytap_vm = get_skytap_vm
-
-		skytap_vm.runstate == 'running'
-	end
-
-	def authorized?
-		!get_skytap_vm.nil?
-	end
-	
 	def awaken!
 		skytap_vm = get_skytap_vm
 
