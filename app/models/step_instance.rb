@@ -1,4 +1,6 @@
 class StepInstance < ActiveRecord::Base
+	STATUSES = [:finished, :running, :queued, :error]
+
 	belongs_to :step
 	belongs_to :rcx_client
 
@@ -12,9 +14,26 @@ class StepInstance < ActiveRecord::Base
 	def refresh_status
 		raise 'Not yet started' unless started?
 
-		result = rcx_client.command_status(self.client_guid)
+		result = rcx_client.command_status(client_guid)
 		update_from_client_result(result)
 		self
+	end
+
+	def status
+		if !error.nil?
+			:error
+		elsif !started?
+			:queued
+		elsif has_exited
+			:finished
+		else
+			:running
+		end
+	end
+
+	def result
+		return nil unless finished?
+		exit_code == 0 ? :succeeded : :failed
 	end
 
 	def started?
@@ -22,11 +41,15 @@ class StepInstance < ActiveRecord::Base
 	end
 
 	def finished?
-		has_exited
+		[:finished, :error].include?(status)
 	end
 
 	def succeeded?
-		has_exited && exit_code == 0
+		result == :succeeded
+	end
+
+	def failed?
+		result == :failed
 	end
 
 	def next_step_instance
@@ -46,6 +69,6 @@ class StepInstance < ActiveRecord::Base
 		self.exit_code = result['ExitCode']
 		self.standard_error = result['StandardError']
 		self.standard_output = result['StandardOutput']
-		self.save
+		save!
 	end	
 end

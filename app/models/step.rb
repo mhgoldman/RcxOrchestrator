@@ -6,11 +6,16 @@ class Step < ActiveRecord::Base
 	validates :index, presence: true, uniqueness: { scope: :batch }
 
 	def finished?
-		step_instances.each {|si| return false unless si.finished? }
+		step_instances.each {|si| return false unless si.finished? || batch.finished_for_rcx_client?(si.rcx_client)}
 		true
 	end
 
-	def finished_for_rcx_client?(rcx_client)
-		rcx_client.step_instances.find_by(step: self).finished?
+	def step_instances_count_by_status
+		counts = {}
+		StepInstance::STATUSES.each do |status|
+			counts[status] = step_instances.select {|si| si.status == status }.count
+		end
+
+		counts
 	end
 end

@@ -30,15 +30,15 @@ class RcxSkytap::SkytapRcxClient < RcxClient
 	def get_skytap_vm
 		# Note: we don't store this in an instance variable because the VM statuses change all the time. We always need a fresh copy.
 
-		set_skytap_credentials
+		self.class.set_skytap_credentials_for(user)
 
-		RcxSkytap::Skytap::Vm.find(skytap_vm_id, configuration_url: skytap_config_url)
+		RcxSkytap::Skytap::Vm.find(skytap_vm_id, configuration_url: skytap_config_url) or raise 'Skytap VM does not exist or user is not authorized'
 	end
 
 	def self.fetch_for_user(user)
 		return [] if user.rcx_skytap_username.blank? || user.rcx_skytap_api_token.blank?
 		
-		set_skytap_credentials
+		set_skytap_credentials_for(user)
 
 		vms = []
 
@@ -55,7 +55,7 @@ class RcxSkytap::SkytapRcxClient < RcxClient
 		vms.uniq {|vm| vm.id }.map { |vm| vm.to_skytap_rcx_client_for_user(user) }
 	end	
 
-	def set_skytap_credentials
+	def self.set_skytap_credentials_for(user)
     RequestStore.store[:skytap_username] = user.rcx_skytap_username
     RequestStore.store[:skytap_api_token] = user.rcx_skytap_api_token		
    end

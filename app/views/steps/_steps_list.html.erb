@@ -4,7 +4,6 @@
 			<th>Index</th>
 			<th>Command</th>
 			<th>Status</th>
-			<th/>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,8 +11,7 @@
 			<tr>
 				<td><%= step.index %></td>
 				<td><%= link_to step.command.name, step.command %></td>
-				<td><%= status_for(step) %></td>
-				<td><%= link_to 'Instances', step_instances_path(step_id: step) %></td>
+				<td><%= link_to step_status_for(step), step_instances_path(step_id: step) %></td>
 			</tr>
 		<% end %>
 	</tbody>

@@ -2,16 +2,20 @@
 	<thead>
 		<tr>
 			<th>Display Name</th>
-			<th>Agent Endpoint</th>
 			<th>Source</th>
+			<% if @batch %>
+				<th>Status</th>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>
 		<% rcx_clients.each do |rcx_client| %>
 			<tr>
 				<td><%= rcx_client.display_name %></td>
-				<td><%= rcx_client.agent_endpoint_url %></td>
 				<td><%= rcx_client.class.display_name %></td>
+				<% if @batch %>				
+					<td><%= link_to batch_rcx_client_status_for(@batch, rcx_client), step_instances_path(batch_id: @batch, rcx_client_id: rcx_client) %></td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>

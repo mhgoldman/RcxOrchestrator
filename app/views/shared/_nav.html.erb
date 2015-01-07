@@ -15,7 +15,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li><%= nav_link 'Dashboard', dashboard_path %></li>
           <li><%= nav_link 'My Batches', batches_path %></li>                    
           <li><%= nav_link 'My Clients', rcx_clients_path %></li>
           <li><%= nav_link 'Commands', commands_path %></li>

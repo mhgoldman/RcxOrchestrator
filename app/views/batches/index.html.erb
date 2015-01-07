@@ -5,6 +5,7 @@
 		<tr>
 			<th>Name</th>
 			<th>Created At</th>
+			<th>Status</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,6 +13,7 @@
 			<tr>
 				<td><%= link_to batch.name, batch %></td>
 				<td><%= batch.created_at %></td>
+				<td><%= batch_status_for(batch) %></td>
 			</tr>
 		<% end %>
 	</tbody>

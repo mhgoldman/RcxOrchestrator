@@ -5,8 +5,8 @@ module ApplicationHelper
 			'passwords' => 'Log In',
 			'unlocks' => 'Log In',
 			'commands' => 'Commands',
-			'dashboard' => 'Dashboard',
-			'batches' => 'My Batches'
+			'batches' => 'My Batches',
+			'step_instances' => 'My Batches'
 		}
 		
 		if link_text == controller_map[controller.controller_name]
@@ -41,8 +41,4 @@ module ApplicationHelper
   def print_blankable(str)
   	str && !str.blank? ? str : "<em>n/a</em>".html_safe
   end
-
-	def status_for(batch)
-		batch.finished? ? "Finished" : "Running"
-	end  
 end
