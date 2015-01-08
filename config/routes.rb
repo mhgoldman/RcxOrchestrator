@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-
-
   resources :rcx_clients
 
   get 'rcx_clients' => 'rcx_clients#index'
@@ -10,7 +7,7 @@ Rails.application.routes.draw do
   resources :batches do
     resources :after_batch_creation
   end
-  
+
   resources :batch_commands
   resources :client_batch_commands
 

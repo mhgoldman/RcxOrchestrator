@@ -39,6 +39,6 @@ module ApplicationHelper
   end
 
   def print_blankable(str)
-  	str && !str.blank? ? str : "<em>n/a</em>".html_safe
+  	(str && !str.blank?) ? str.gsub("\n", "<br/>").html_safe : "<em>n/a</em>".html_safe
   end
 end
