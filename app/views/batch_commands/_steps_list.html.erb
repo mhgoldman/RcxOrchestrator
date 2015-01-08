@@ -3,7 +3,9 @@
 		<tr>
 			<th>Index</th>
 			<th>Command</th>
-			<th>Status</th>
+			<% unless defined?(statuses) && !statuses %>
+				<th>Status</th>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>
@@ -11,7 +13,9 @@
 			<tr>
 				<td><%= batch_command.index %></td>
 				<td><%= link_to batch_command.command.name, batch_command.command %></td>
-				<td><%= link_to step_status_for(batch_command), client_batch_commands_path(batch_command_id: batch_command) %></td>
+				<% unless defined?(statuses) && !statuses %>
+					<td><%= link_to step_status_for(batch_command), client_batch_commands_path(batch_command_id: batch_command) %></td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>

@@ -2,6 +2,7 @@ class BatchCommand < ActiveRecord::Base
 	belongs_to :batch
 	belongs_to :command
 	has_many :client_batch_commands, dependent: :destroy
+	before_validation :set_index
 
 	validates :index, presence: true, uniqueness: { scope: :batch }
 
@@ -17,5 +18,15 @@ class BatchCommand < ActiveRecord::Base
 		end
 
 		counts
+	end
+
+	private
+
+	def set_index
+		if index.nil?
+			#TODO!!!
+			self.index = ((batch.batch_commands.map {|bc| bc.index}).max || 0) + 1
+			puts "!!!!!!! Index #{index}!!!!!!!"
+		end
 	end
 end

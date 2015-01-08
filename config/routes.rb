@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   get 'rcx_clients' => 'rcx_clients#index'
   post 'rcx_clients' => 'rcx_clients#start_client_update'
 
-  resources :batches
+  resources :batches do
+    resources :after_batch_creation
+  end
+  
   resources :batch_commands
   resources :client_batch_commands
 

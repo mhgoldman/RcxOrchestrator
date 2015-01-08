@@ -85,6 +85,8 @@ gem 'httplog', group: :development
 
 gem 'activerecord-import'
 
+gem 'wicked'
+
 gem 'sidekiq'
 gem 'sinatra', :require => nil
 

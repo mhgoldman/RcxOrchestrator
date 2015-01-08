@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150106135735) do
+ActiveRecord::Schema.define(version: 20150108133351) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "batch_commands", force: :cascade do |t|
     t.integer  "batch_id"
@@ -24,8 +27,9 @@ ActiveRecord::Schema.define(version: 20150106135735) do
   create_table "batches", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "started",    default: false
   end
 
   create_table "batches_rcx_clients", id: false, force: :cascade do |t|
@@ -33,8 +37,8 @@ ActiveRecord::Schema.define(version: 20150106135735) do
     t.integer "rcx_client_id"
   end
 
-  add_index "batches_rcx_clients", ["batch_id"], name: "index_batches_rcx_clients_on_batch_id"
-  add_index "batches_rcx_clients", ["rcx_client_id"], name: "index_batches_rcx_clients_on_rcx_client_id"
+  add_index "batches_rcx_clients", ["batch_id"], name: "index_batches_rcx_clients_on_batch_id", using: :btree
+  add_index "batches_rcx_clients", ["rcx_client_id"], name: "index_batches_rcx_clients_on_rcx_client_id", using: :btree
 
   create_table "client_batch_commands", force: :cascade do |t|
     t.integer  "rcx_client_id"
@@ -44,8 +48,8 @@ ActiveRecord::Schema.define(version: 20150106135735) do
     t.text     "standard_error"
     t.boolean  "has_exited"
     t.integer  "exit_code"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "error"
   end
 
@@ -96,9 +100,9 @@ ActiveRecord::Schema.define(version: 20150106135735) do
     t.datetime "clients_update_finished_at"
   end
 
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
 end

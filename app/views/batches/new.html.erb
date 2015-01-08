@@ -1,0 +1,11 @@
+<h2>New Batch</h2>
+<%= render 'shared/errors', obj: @batch %>
+
+<%= form_for(@batch) do |form| %>
+	<div class="field form-group">
+		<%= form.label :name %><br/>
+		<%= form.text_field :name, placeholder: 'Name', autofocus: true %>
+	</div>
+	<div>
+	<%= form.submit %>
+<% end %>

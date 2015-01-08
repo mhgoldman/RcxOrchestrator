@@ -7,13 +7,17 @@ class Batch < ActiveRecord::Base
 	validates :user, presence: true
 
 	def start
+		update(started: true)
 		generate_client_batch_commands
-
 		batch_commands.first.client_batch_commands.each do |client_batch_command|
 			AwakenJob.perform_later client_batch_command
 		end
 	end
 
+	def started?
+		started
+	end
+	
 	def over?
 		batch_commands.each {|batch_command| return false unless batch_command.over? }
 		true

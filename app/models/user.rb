@@ -3,7 +3,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable, :timeoutable
 
-  has_many :batches, dependent: :destroy
+  has_many :batches, dependent: :destroy do
+    def started
+      self.where(started: true)
+    end
+  end
 
   has_many :rcx_clients do
   	def fetch!

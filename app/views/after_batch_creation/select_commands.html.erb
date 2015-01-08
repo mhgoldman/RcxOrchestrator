@@ -1,0 +1,19 @@
+<h2><%= @batch.name %> &gt; Add Commands</h2>
+<%= render 'shared/errors', obj: @batch %>
+
+<h3>Clients</h3>
+<%= render 'rcx_clients/rcx_clients_list', rcx_clients: @batch.rcx_clients %>
+
+<h3>Commands</h3>
+<%= render 'batch_commands/steps_list', batch_commands: @batch.batch_commands, statuses: false %>
+
+<h3>New Command</h3>
+<%= form_for @batch, url: wizard_path do |form| %>
+	<div class="field form-group">
+		<%= select_tag "command_id_for_new_batch_command", options_from_collection_for_select(Command.all, "id", "name") %>
+	</div>
+	<div>
+		<%= form.submit 'Add Command' %>
+		<%= ('or ' + (link_to 'Finished', batch_after_batch_creation_path(@batch.id, :finish))).html_safe unless @batch.batch_commands.empty? %>
+</div>
+<% end %>

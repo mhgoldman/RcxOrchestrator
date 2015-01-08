@@ -5,7 +5,7 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>Created At</th>
+			<th>Last Updated At</th>
 			<th>Status</th>
 		</tr>
 	</thead>
@@ -13,9 +13,11 @@
 		<% @batches.each do |batch| %>
 			<tr>
 				<td><%= link_to batch.name, batch %></td>
-				<td><%= batch.created_at %></td>
+				<td><%= batch.updated_at %></td>
 				<td><%= batch_status_for(batch) %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
+
+<%= link_to 'New Batch', new_batch_path %>

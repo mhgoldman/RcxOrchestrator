@@ -1,5 +1,12 @@
 <h2><%= @batch.name %></h2>
-
+<div class="attribute">
+	<div class="attribute-name">Status</div>
+	<div class="attribute-value"><%= batch_status_for(@batch) %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Last Updated</div>
+	<div class="attribute-value"><%= @batch.updated_at %></div>
+</div>
 <h3>Clients</h3>
 <%= render 'rcx_clients/rcx_clients_list', rcx_clients: @batch.rcx_clients, batch: @batch %>
 
