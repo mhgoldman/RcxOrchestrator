@@ -2,8 +2,8 @@ class ExecuteJob < RcxCommandJob
   
   EXECUTE_TIMEOUT = 1800 #seconds
 
-  def finished?(client_batch_command, started_work, timeout)
-    client_batch_command.refresh_status.finished?
+  def over?(client_batch_command, started_work, timeout)
+    client_batch_command.refresh_status.over?
   end
 
   def client_batch_command_should_be_started?(client_batch_command, started_work, timeout)

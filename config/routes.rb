@@ -1,22 +1,21 @@
 Rails.application.routes.draw do
-  resources :client_batch_commands
 
-  resources :batch_commands
 
-  resources :rcx_clients, only: :index
+
+  resources :rcx_clients
 
   get 'rcx_clients' => 'rcx_clients#index'
   post 'rcx_clients' => 'rcx_clients#start_client_update'
 
   resources :batches
+  resources :batch_commands
+  resources :client_batch_commands
 
   get 'welcome/index'
 
   resources :commands
 
   devise_for :users
-
-  get '/dashboard' => 'dashboard#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

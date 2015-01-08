@@ -5,13 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: rcx_orchestrator_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,7 +19,8 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
+  database: rcx_orchestrator_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: rcx_orchestrator_production

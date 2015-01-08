@@ -14,34 +14,33 @@ class Batch < ActiveRecord::Base
 		end
 	end
 
-	def finished?
-		rcx_clients.each {|rcx_client| return false unless finished_for_rcx_client?(rcx_client)}
+	def over?
+		batch_commands.each {|batch_command| return false unless batch_command.over? }
 		true
 	end
 
-	def finished_for_rcx_client?(rcx_client)
-		statuses = rcx_client_client_batch_commands_count_by_status(rcx_client)
-		statuses[:finished] == batch_commands.count || statuses[:error] > 0
-	end	
-
-	def client_batch_commands_by_rcx_client(rcx_client)
-		batch_commands.map {|batch_command| ClientBatchCommand.find_by(batch_command: batch_command, rcx_client: rcx_client) }
+	def over_for_rcx_client?(rcx_client)
+		client_batch_commands_by_rcx_client(rcx_client).each {|cbc| return false unless cbc.over? }
+		true
 	end
 
 	def rcx_client_client_batch_commands_count_by_status(rcx_client)
 		counts = {}
 		ClientBatchCommand::STATUSES.each do |status|
 			client_batch_commands = client_batch_commands_by_rcx_client(rcx_client)
-			counts[status] = client_batch_commands.select {|si| si.status == status }.count
+			counts[status] = client_batch_commands.select {|cbc| cbc.status == status }.count
 		end
 
 		counts		
 	end
 
+	def client_batch_commands_by_rcx_client(rcx_client)
+		batch_commands.map {|batch_command| ClientBatchCommand.find_by(batch_command: batch_command, rcx_client: rcx_client) }
+	end
+
 	private
 	
 	def generate_client_batch_commands
-		# call immediately prior to beginning the batch
 		batch_commands.each do |batch_command|
 			batch_command.client_batch_commands.destroy_all				
 			rcx_clients.each do |rcx_client|

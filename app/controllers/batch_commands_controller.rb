@@ -1,2 +1,2 @@
-class StepsController < ApplicationController
+class BatchCommandsController < ApplicationController
 end

@@ -4,13 +4,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-# Use postgres in production and sqlite3 in dev
+# Use postgres in dev AND production now...
+gem 'pg'
+
 group :production do 
-  gem 'pg'
   gem 'rails_12factor'
-end
-group :development do
-  gem 'sqlite3'
 end
 
 # Use SCSS for stylesheets

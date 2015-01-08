@@ -1,0 +1,30 @@
+<h2><%= batch_link_for(@batch) %> &gt; <%= @command.name %> &gt; <%= @rcx_client.display_name %></h2>
+
+<div class="attribute">
+	<div class="attribute-name">Status</div>
+	<div class="attribute-value"><%= client_batch_command_status_for(@client_batch_command) %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Last Updated</div>
+	<div class="attribute-value"><%= @client_batch_command.updated_at %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Remote Standard Output</div>
+	<div class="attribute-value"><%= print_blankable(@client_batch_command.standard_output) %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Remote Standard Error</div>
+	<div class="attribute-value"><%= print_blankable(@client_batch_command.standard_error) %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Local Error</div>
+	<div class="attribute-value"><%= print_blankable(@client_batch_command.error) %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Local ID</div>
+	<div class="attribute-value"><%= @client_batch_command.id %></div>
+</div>
+<div class="attribute">
+	<div class="attribute-name">Remote ID</div>
+	<div class="attribute-value"><%= @client_batch_command.client_guid %></div>
+</div>

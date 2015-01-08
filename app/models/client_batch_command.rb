@@ -1,5 +1,5 @@
 class ClientBatchCommand < ActiveRecord::Base
-	STATUSES = [:finished, :running, :queued, :error]
+	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
 	belongs_to :batch_command
 	belongs_to :rcx_client
@@ -20,14 +20,16 @@ class ClientBatchCommand < ActiveRecord::Base
 	end
 
 	def status
-		if !error.nil?
-			:error
+		if errored?
+			:errored			
+		elsif blocked?
+			:blocked
 		elsif !started?
 			:queued
-		elsif has_exited
-			:finished
-		else
+		elsif running?
 			:running
+		elsif finished?
+			:finished
 		end
 	end
 
@@ -36,12 +38,29 @@ class ClientBatchCommand < ActiveRecord::Base
 		exit_code == 0 ? :succeeded : :failed
 	end
 
+	def blocked?
+		previous = previous_client_batch_command
+		!!previous && (previous.errored? || previous.blocked?)
+	end
+
 	def started?
 		!client_guid.nil?
 	end
 
+	def running?
+		started? && !over?
+	end
+
+	def errored?
+		!!error
+	end
+
+	def over?
+		finished? || errored? || blocked?
+	end
+
 	def finished?
-		[:finished, :error].include?(status)
+		has_exited
 	end
 
 	def succeeded?
@@ -53,8 +72,11 @@ class ClientBatchCommand < ActiveRecord::Base
 	end
 
 	def next_client_batch_command
-		next_step_in_batch = batch_command.batch.batch_commands.find_by(index: batch_command.index + 1)
-		ClientBatchCommand.find_by(rcx_client: rcx_client, batch_command_id: next_step_in_batch)
+		relative_client_batch_command(1)
+	end
+
+	def previous_client_batch_command
+		relative_client_batch_command(-1)
 	end
 
 	def reset_status
@@ -70,5 +92,10 @@ class ClientBatchCommand < ActiveRecord::Base
 		self.standard_error = result['StandardError']
 		self.standard_output = result['StandardOutput']
 		save!
+	end	
+
+	def relative_client_batch_command(offset)
+		relative = batch_command.batch.batch_commands.find_by(index: batch_command.index + offset)
+		ClientBatchCommand.find_by(rcx_client: rcx_client, batch_command_id: relative)
 	end	
 end

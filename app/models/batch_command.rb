@@ -5,15 +5,15 @@ class BatchCommand < ActiveRecord::Base
 
 	validates :index, presence: true, uniqueness: { scope: :batch }
 
-	def finished?
-		client_batch_commands.each {|si| return false unless si.finished? || batch.finished_for_rcx_client?(si.rcx_client)}
+	def over?
+		client_batch_commands.each {|cbc| return false unless cbc.over? }
 		true
 	end
 
 	def client_batch_commands_count_by_status
 		counts = {}
 		ClientBatchCommand::STATUSES.each do |status|
-			counts[status] = client_batch_commands.select {|si| si.status == status }.count
+			counts[status] = client_batch_commands.select {|cbc| cbc.status == status }.count
 		end
 
 		counts

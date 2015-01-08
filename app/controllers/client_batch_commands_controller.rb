@@ -6,12 +6,19 @@ class ClientBatchCommandsController < ApplicationController
 			@batch = @batch_command.batch
 			@command = @batch_command.command
 		elsif params[:batch_id] && params[:rcx_client_id]
-			@view_by = :rcx_client
 			@rcx_client = RcxClient.find(params[:rcx_client_id])
 			@batch = Batch.find(params[:batch_id])
 			@client_batch_commands = @batch.client_batch_commands_by_rcx_client(@rcx_client)
 
 			@rcx_client_name = @rcx_client.display_name
 		end
+	end
+
+	def show
+		@client_batch_command = ClientBatchCommand.find(params[:id])
+		@rcx_client = @client_batch_command.rcx_client
+		@batch_command = @client_batch_command.batch_command
+		@command = @batch_command.command
+		@batch = @batch_command.batch
 	end
 end

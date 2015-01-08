@@ -12,7 +12,7 @@
 	<tbody>
 		<% rcx_clients.each do |rcx_client| %>
 			<tr>
-				<td><%= rcx_client.display_name %></td>
+				<td><%= rcx_client_link_for(rcx_client) %></td>
 				<td><%= rcx_client.class.display_name %></td>
 				<% if defined?(batch) %>				
 					<td><%= link_to batch_rcx_client_status_for(batch, rcx_client), client_batch_commands_path(batch_id: @batch, rcx_client_id: rcx_client) %></td>

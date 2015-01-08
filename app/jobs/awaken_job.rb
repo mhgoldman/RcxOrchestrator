@@ -2,7 +2,7 @@ class AwakenJob < RcxCommandJob
 
   AWAKEN_TIMEOUT = 600 #seconds
 
-  def finished?(client_batch_command, started_work, timeout)
+  def over?(client_batch_command, started_work, timeout)
     client_batch_command.rcx_client.listening?
   end
 

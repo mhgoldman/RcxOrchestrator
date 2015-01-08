@@ -1,11 +1,10 @@
-
-<h3>
+<h2>
 <% if @batch_command %>
-	<%= link_to @batch.name, @batch %> &gt; <%= @batch_command.index %>. <%= @command.name %>
+	<%= batch_link_for(@batch) %> &gt; <%= @command.name %>
 <% else %>
-	<%= link_to @batch.name, @batch %> &gt; <%= @rcx_client.display_name %>
+	<%= batch_link_for(@batch) %> &gt; <%= @rcx_client.display_name %>
 <% end %>
-</h3>
+</h2>
 
 <table class="table">
 	<thead>
@@ -17,24 +16,18 @@
 					<th>Command</th>
 			<% end %>
 			<th>Status</th>
-			<th>Exit Code</th>
-			<th>Standard Output</th>
-			<th>Standard Error</th>
 		</tr>
 	</thead>
 	<tbody>
 		<% @client_batch_commands.each do |client_batch_command| %>
 			<tr>
 				<% if @batch_command %>				
-					<td><%= client_batch_command.rcx_client.display_name %></td>
+					<td><%= rcx_client_link_for(client_batch_command.rcx_client) %></td>
 				<% else %>
 					<td><%= client_batch_command.batch_command.index %></td>
-					<td><%= link_to client_batch_command.batch_command.command.name, client_batch_command.batch_command.command %></td>
+					<td><%= command_link_for(client_batch_command.batch_command.command) %></td>
 				<%end %>
-				<td><%= client_batch_command.status %></td>
-				<td><%= client_batch_command.exit_code %></td>
-				<td><%= client_batch_command.standard_output %></td>
-				<td><%= client_batch_command.standard_error %></td>
+				<td><%= client_batch_command_status_link_for(client_batch_command) %></td>
 			</tr>
 		<% end %>
 	</tbody>
