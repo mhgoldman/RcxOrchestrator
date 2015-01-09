@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :callbacks
+
   resources :rcx_clients
 
   get 'rcx_clients' => 'rcx_clients#index'

@@ -2,12 +2,14 @@ class ClientBatchCommand < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
 	belongs_to :batch_command
-	belongs_to :rcx_client
+	belongs_to :rcx_client	
+
+	before_create :set_callback_token
 
 	def start!
 		raise 'Already started' if started?
 
-		result = rcx_client.invoke_command(batch_command.command)
+		result = rcx_client.invoke(self)
 		update_from_client_result(result)
 	end
 
@@ -52,7 +54,7 @@ class ClientBatchCommand < ActiveRecord::Base
 	end
 
 	def errored?
-		!!error
+		fatally_errored?
 	end
 
 	def over?
@@ -71,6 +73,18 @@ class ClientBatchCommand < ActiveRecord::Base
 		result == :failed
 	end
 
+	def exists?
+		ClientBatchCommand.exists?(id)
+	end
+
+	def fatally_errored!
+		update(fatally_errored: true)
+	end
+
+	def fatally_errored?
+		fatally_errored
+	end
+
 	def next_client_batch_command
 		relative_client_batch_command(1)
 	end
@@ -81,6 +95,21 @@ class ClientBatchCommand < ActiveRecord::Base
 
 	def reset_status
 		update_from_client_result({})
+	end
+
+	def callback_url
+		Rails.application.routes.url_helpers.client_batch_command_url(self, host: RcxOrchestrator::Application.config.rcx_callback_host)
+	end
+
+	def process_callback(result)
+		return false if result['CallbackToken'] != callback_token
+		update_from_client_result(result)
+		true
+	end
+
+	def append_error(error)
+		new_error = (self.error ||= '') << error
+		update(error: new_error)
 	end
 
 	private
@@ -98,4 +127,8 @@ class ClientBatchCommand < ActiveRecord::Base
 		relative = batch_command.batch.batch_commands.find_by(index: batch_command.index + offset)
 		ClientBatchCommand.find_by(rcx_client: rcx_client, batch_command_id: relative)
 	end	
+
+	def set_callback_token
+		self.callback_token = Digest::SHA1.hexdigest([Time.now, rand].join)
+	end
 end

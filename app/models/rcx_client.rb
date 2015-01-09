@@ -33,10 +33,13 @@ class RcxClient < ActiveRecord::Base
 		end
 	end
 
-	def invoke_command(command)
+	def invoke(client_batch_command)
+		callback_url = client_batch_command.callback_url
+		callback_token = client_batch_command.callback_token		
+		command = client_batch_command.batch_command.command
 		path = command.path
 		args = command.args.is_a?(String) ? command.args.split : args 
-		invoke_result_json = agent_endpoint['Rcx/commands'].post({path: path, args: args}.to_json, content_type: :json)
+		invoke_result_json = agent_endpoint['Rcx/commands'].post({path: path, args: args, callbackUrl: callback_url, callbackToken: callback_token}.to_json, content_type: :json)
 		JSON.parse(invoke_result_json)
 	end
 

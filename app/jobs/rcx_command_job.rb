@@ -11,11 +11,19 @@ class RcxCommandJob < ActiveJob::Base
     @timeout - POLL_INTERVAL
   end
 
-  def over?
-    raise 'Not implemented'
+  def reschedule
+    self.class.set(wait: POLL_INTERVAL.seconds).perform_later(@client_batch_command, @work_has_started, remaining_timeout_period)
   end
 
-  def client_batch_command_should_be_started?
+  def reschedulable?
+    @client_batch_command.exists? && !work_has_started? && !timed_out?
+  end
+
+  def work_has_started?
+    @work_has_started
+  end
+  
+  def over?
     raise 'Not implemented'
   end
 
@@ -27,31 +35,35 @@ class RcxCommandJob < ActiveJob::Base
     raise 'Not implemented'
   end
 
-  def perform(client_batch_command, work_previously_started, timeout)
+  def perform(client_batch_command, work_has_started, timeout)
     begin
       @client_batch_command = client_batch_command
       @timeout = timeout
+      @work_has_started = work_has_started
 
       logger.debug "#{self.class}: client_batch_command=#{@client_batch_command}, timeout=#{@timeout}"
 
-      unless ClientBatchCommand.exists?(@client_batch_command.id)
-        raise "ClientBatchCommand #{@client_batch_command.id} no longer exists - I may be a duplicate job"
-      end
-
-      start_work unless work_previously_started
+      raise "ClientBatchCommand does not exist" unless @client_batch_command.exists?
+        
+      (start_work && @work_has_started = true) unless @work_has_started
 
       if over?
         on_finish
       elsif timed_out?
         raise "#{self} timed out" 
       else
-        self.class.set(wait: POLL_INTERVAL.seconds).perform_later(@client_batch_command, true, remaining_timeout_period)
+        reschedule
       end
     rescue StandardError => ex
       begin
-        error = "#{ex.class} while performing #{self}: #{ex}\n#{ex.backtrace.join("\n")}"
-        logger.error error
-        @client_batch_command.update(error: error)
+          error = "#{ex.class} while performing #{self}: #{ex}\n#{ex.backtrace.join("\n")} This job is #{reschedulable? ? 'will' : 'will not'} be rescheduled."
+          logger.error error
+          @client_batch_command.append_error(error) rescue nil          
+          if reschedulable?
+            reschedule
+          else
+            @client_batch_command.fatally_errored!
+          end
       rescue
         # Swallow exceptions in exception handling so they don't bubble up to ÅctiveJob
       end

@@ -1,4 +1,7 @@
 class ClientBatchCommandsController < ApplicationController
+	skip_before_action :verify_authenticity_token, only: :update
+	skip_before_action :authenticate_user!, only: :update
+
 	def index
 		if params[:batch_command_id]
 			@batch_command = BatchCommand.find(params[:batch_command_id])
@@ -21,4 +24,14 @@ class ClientBatchCommandsController < ApplicationController
 		@command = @batch_command.command
 		@batch = @batch_command.batch
 	end
+
+	def update
+		@client_batch_command = ClientBatchCommand.find(params[:id])
+		result = JSON.parse(request.body.read)
+		if @client_batch_command.process_callback(result)
+			render nothing: true, status: :ok
+		else
+			render nothing: true, status: :forbidden
+		end
+	end	
 end

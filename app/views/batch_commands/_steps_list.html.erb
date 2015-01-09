@@ -1,4 +1,5 @@
-<table class="table">
+<p id="no_batch_commands_msg"<%= ' style="display: none;"'.html_safe if batch_commands.any? %>>There are no commands.</p>
+<table class="table" id="commands_table" <%= ' style="display: none;"'.html_safe unless batch_commands.any? %>>
 	<thead>
 		<tr>
 			<th>Index</th>
