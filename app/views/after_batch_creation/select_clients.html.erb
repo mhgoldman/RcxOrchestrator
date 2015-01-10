@@ -3,9 +3,9 @@
 
 <%= form_for @batch, url: wizard_path do |form| %>
 	<div class="field form-group">
-		<% current_user.rcx_clients.each do |rcx_client| %>
-			<%= check_box_tag "batch[rcx_client_ids][]", rcx_client.id, @batch.rcx_client_ids.include?(rcx_client.id) %>
-			<%= rcx_client.display_name %><br/>
+		<% current_user.clients.each do |client| %>
+			<%= check_box_tag "batch[client_ids][]", client.id, @batch.client_ids.include?(client.id) %>
+			<%= client.display_name %><br/>
 		<% end %>
 	</div>
 	<div>

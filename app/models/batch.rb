@@ -1,6 +1,6 @@
 class Batch < ActiveRecord::Base
 	belongs_to :user
-	has_and_belongs_to_many :rcx_clients
+	has_and_belongs_to_many :clients
 	has_many :batch_commands, dependent: :destroy
 
 	validates :name, presence: true
@@ -23,23 +23,23 @@ class Batch < ActiveRecord::Base
 		true
 	end
 
-	def over_for_rcx_client?(rcx_client)
-		client_batch_commands_by_rcx_client(rcx_client).each {|cbc| return false unless cbc.over? }
+	def over_for_client?(client)
+		client_batch_commands_by_client(client).each {|cbc| return false unless cbc.over? }
 		true
 	end
 
-	def rcx_client_client_batch_commands_count_by_status(rcx_client)
+	def client_client_batch_commands_count_by_status(client)
 		counts = {}
 		ClientBatchCommand::STATUSES.each do |status|
-			client_batch_commands = client_batch_commands_by_rcx_client(rcx_client)
+			client_batch_commands = client_batch_commands_by_client(client)
 			counts[status] = client_batch_commands.select {|cbc| cbc.status == status }.count
 		end
 
 		counts		
 	end
 
-	def client_batch_commands_by_rcx_client(rcx_client)
-		batch_commands.map {|batch_command| ClientBatchCommand.find_by(batch_command: batch_command, rcx_client: rcx_client) }
+	def client_batch_commands_by_client(client)
+		batch_commands.map {|batch_command| ClientBatchCommand.find_by(batch_command: batch_command, client: client) }
 	end
 
 	private
@@ -47,8 +47,8 @@ class Batch < ActiveRecord::Base
 	def generate_client_batch_commands
 		batch_commands.each do |batch_command|
 			batch_command.client_batch_commands.destroy_all				
-			rcx_clients.each do |rcx_client|
-				batch_command.client_batch_commands.create(rcx_client: rcx_client)
+			clients.each do |client|
+				batch_command.client_batch_commands.create(client: client)
 			end
 		end
 	end

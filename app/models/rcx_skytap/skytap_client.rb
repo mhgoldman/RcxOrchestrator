@@ -1,4 +1,4 @@
-class RcxSkytap::SkytapRcxClient < RcxClient
+class RcxSkytap::SkytapClient < Client
 	has_display_name "Skytap VMs"	
 
 	def awaken!
@@ -42,7 +42,7 @@ class RcxSkytap::SkytapRcxClient < RcxClient
 			end
 		end
 
-		vms.uniq {|vm| vm.id }.map { |vm| vm.to_skytap_rcx_client_for_user(user) }.compact
+		vms.uniq {|vm| vm.id }.map { |vm| vm.to_skytap_client_for_user(user) }.compact
 	end	
 
 	def self.set_skytap_credentials_for(user)

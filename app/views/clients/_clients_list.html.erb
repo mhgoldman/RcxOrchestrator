@@ -1,0 +1,23 @@
+<p id="no_clients_msg"<%= ' style="display: none;"'.html_safe if clients.any? %>>There are no clients.</p>
+<table class="table" id="clients_table" <%= ' style="display: none;"'.html_safe unless clients.any? %>>
+	<thead>
+		<tr>
+			<th>Display Name</th>
+			<th>Source</th>
+			<% if defined?(batch) %>
+				<th>Status</th>
+			<% end %>
+		</tr>
+	</thead>
+	<tbody>
+		<% clients.each do |client| %>
+			<tr>
+				<td><%= client_link_for(client) %></td>
+				<td><%= client.class.display_name %></td>
+				<% if defined?(batch) %>				
+					<td><%= link_to batch_client_status_for(batch, client), client_batch_commands_path(batch_id: @batch, client_id: client) %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

@@ -11,7 +11,7 @@ class ExecuteJob < RcxCommandJob
       next_client_batch_command = @client_batch_command.next_client_batch_command
       ExecuteJob.set.perform_later(next_client_batch_command) if next_client_batch_command
     else
-      raise "ClientBatchCommand #{@client_batch_command} errored/failed, aborting batch for client #{rcx_client}"
+      raise "ClientBatchCommand #{@client_batch_command} errored/failed, aborting batch for client #{client}"
     end
   end
 

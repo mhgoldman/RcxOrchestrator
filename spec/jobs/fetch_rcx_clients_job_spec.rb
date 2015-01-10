@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe FetchRcxClientsJob, :type => :job do
+RSpec.describe FetchClientsJob, :type => :job do
   pending "add some examples to (or delete) #{__FILE__}"
 end

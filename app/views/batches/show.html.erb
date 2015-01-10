@@ -8,7 +8,7 @@
 	<div class="attribute-value"><%= @batch.updated_at %></div>
 </div>
 <h3>Clients</h3>
-<%= render 'rcx_clients/rcx_clients_list', rcx_clients: @batch.rcx_clients, batch: @batch %>
+<%= render 'clients/clients_list', clients: @batch.clients, batch: @batch %>
 
 <h3>Commands</h3>
 <%= render 'batch_commands/steps_list', batch_commands: @batch.batch_commands %>

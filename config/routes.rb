@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :callbacks
 
-  resources :rcx_clients
+  resources :clients
 
   resources :batches do
     resources :after_batch_creation

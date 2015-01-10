@@ -1,7 +1,7 @@
 class CreateClientBatchCommands < ActiveRecord::Migration
   def change
     create_table :client_batch_commands do |t|
-      t.integer :rcx_client_id
+      t.integer :client_id
       t.integer :batch_command_id
       t.string :client_guid
       t.text :standard_output

@@ -1,4 +1,4 @@
-class RcxClient < ActiveRecord::Base
+class Client < ActiveRecord::Base
 	has_and_belongs_to_many :batches	
 	has_many :client_batch_commands, dependent: :destroy
 	belongs_to :user
@@ -12,8 +12,8 @@ class RcxClient < ActiveRecord::Base
 	end
 
 	def self.fetch_for_user!(user)
-		new_clients = RcxClient.fetch_for_user(user)
-		user.update(rcx_clients: new_clients)
+		new_clients = Client.fetch_for_user(user)
+		user.update(clients: new_clients)
 	end
 
 	### "Abstract" (platform specific) Methods
@@ -54,13 +54,13 @@ class RcxClient < ActiveRecord::Base
 	end
 
 	def self.fetch_for_user(user)
-		# algorithm: for each client in the new list, see if there's an existing RcxClient object that seems to represent the same client.
+		# algorithm: for each client in the new list, see if there's an existing Client object that seems to represent the same client.
 		# if so, keep the old one. if not, use the new one. clients that were on the old list but not on the new one will go away.
 		# we have to do all this to ensure that existing clients' IDs don't change, as would screw up the database foreign keys and stuff.
 		client_list = []
 
-		RcxOrchestrator::Application.config.rcx_client_types.each do |client_type|
-			old_clients = user.rcx_clients
+		RcxOrchestrator::Application.config.client_types.each do |client_type|
+			old_clients = user.clients
 
 			client_type_class_name = client_type.to_s.camelize
 			client_type_class = client_type_class_name.constantize

@@ -32,16 +32,16 @@ ActiveRecord::Schema.define(version: 20150109173332) do
     t.boolean  "started",    default: false
   end
 
-  create_table "batches_rcx_clients", id: false, force: :cascade do |t|
+  create_table "batches_clients", id: false, force: :cascade do |t|
     t.integer "batch_id"
-    t.integer "rcx_client_id"
+    t.integer "client_id"
   end
 
-  add_index "batches_rcx_clients", ["batch_id"], name: "index_batches_rcx_clients_on_batch_id", using: :btree
-  add_index "batches_rcx_clients", ["rcx_client_id"], name: "index_batches_rcx_clients_on_rcx_client_id", using: :btree
+  add_index "batches_clients", ["batch_id"], name: "index_batches_clients_on_batch_id", using: :btree
+  add_index "batches_clients", ["client_id"], name: "index_batches_clients_on_client_id", using: :btree
 
   create_table "client_batch_commands", force: :cascade do |t|
-    t.integer  "rcx_client_id"
+    t.integer  "client_id"
     t.integer  "batch_command_id"
     t.string   "client_guid"
     t.text     "standard_output"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20150109173332) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "rcx_clients", force: :cascade do |t|
+  create_table "clients", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "display_name"
     t.string   "agent_endpoint_url"

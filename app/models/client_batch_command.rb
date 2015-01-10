@@ -2,21 +2,21 @@ class ClientBatchCommand < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
 	belongs_to :batch_command
-	belongs_to :rcx_client	
+	belongs_to :client	
 
 	before_create :set_callback_token
 
 	def start!
 		raise 'Already started' if started?
 
-		result = rcx_client.invoke(self)
+		result = client.invoke(self)
 		update_from_client_result(result)
 	end
 
 	def refresh_status
 		raise 'Not yet started' unless started?
 
-		result = rcx_client.command_status(client_guid)
+		result = client.command_status(client_guid)
 		update_from_client_result(result)
 		self
 	end
@@ -125,7 +125,7 @@ class ClientBatchCommand < ActiveRecord::Base
 
 	def relative_client_batch_command(offset)
 		relative = batch_command.batch.batch_commands.find_by(index: batch_command.index + offset)
-		ClientBatchCommand.find_by(rcx_client: rcx_client, batch_command_id: relative)
+		ClientBatchCommand.find_by(client: client, batch_command_id: relative)
 	end	
 
 	def set_callback_token

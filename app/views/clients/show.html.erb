@@ -1,21 +1,21 @@
 <h2>
-	<%= @rcx_client.display_name %>
+	<%= @client.display_name %>
 </h2>
 
 
 <div class="attribute">
 	<div class="attribute-name">Source</div>
-	<div class="attribute-value"><%= @rcx_client.class.display_name %></div>
+	<div class="attribute-value"><%= @client.class.display_name %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Last Updated</div>
-	<div class="attribute-value"><%= @rcx_client.updated_at %></div>
+	<div class="attribute-value"><%= @client.updated_at %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Agent Endpoint URL</div>
-	<div class="attribute-value"><%= @rcx_client.agent_endpoint_url %></div>
+	<div class="attribute-value"><%= @client.agent_endpoint_url %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Local ID</div>
-	<div class="attribute-value"><%= @rcx_client.id %></div>
+	<div class="attribute-value"><%= @client.id %></div>
 </div>

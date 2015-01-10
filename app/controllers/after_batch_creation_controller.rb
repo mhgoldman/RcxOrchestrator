@@ -8,7 +8,7 @@ class AfterBatchCreationController < ApplicationController
 	def show
 		case step
 		when :select_clients
-			@rcx_clients = current_user.rcx_clients
+			@clients = current_user.clients
 		when :select_commands
 		end
 
@@ -20,7 +20,7 @@ class AfterBatchCreationController < ApplicationController
 
 		case step
 		when :select_clients
-			@batch.update(rcx_client_ids: params[:batch][:rcx_client_ids])
+			@batch.update(client_ids: params[:batch][:client_ids])
 			render_wizard @batch		
 		when :select_commands
 			@batch.batch_commands.create(command_id: params[:command_id_for_new_batch_command])

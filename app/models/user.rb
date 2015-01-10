@@ -9,9 +9,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  has_many :rcx_clients do
+  has_many :clients do
     def fetch!
-      RcxClient.fetch_for_user!(self.proxy_association.owner)
+      Client.fetch_for_user!(self.proxy_association.owner)
     end
 
     def fetching?

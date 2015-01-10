@@ -1,6 +1,6 @@
-class CreateRcxClients < ActiveRecord::Migration
+class CreateClients < ActiveRecord::Migration
   def change
-    create_table :rcx_clients do |t|
+    create_table :clients do |t|
       t.integer :user_id      
       t.string :display_name
       t.string :agent_endpoint_url
