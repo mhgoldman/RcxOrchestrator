@@ -1,6 +1,6 @@
 class BatchesController < ApplicationController
 	def index
-		@batches = current_user.batches.started
+		@batches = current_user.batches.started.order("id DESC")
 	end
 
 	def show

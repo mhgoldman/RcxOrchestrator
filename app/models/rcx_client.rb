@@ -13,8 +13,7 @@ class RcxClient < ActiveRecord::Base
 
 	def self.fetch_for_user!(user)
 		new_clients = RcxClient.fetch_for_user(user)
-		user.rcx_clients = new_clients
-		user.save
+		user.update(rcx_clients: new_clients)
 	end
 
 	### "Abstract" (platform specific) Methods

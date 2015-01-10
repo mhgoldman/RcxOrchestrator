@@ -7,7 +7,7 @@ class RcxClientsController < ApplicationController
 		@rcx_client = current_user.rcx_clients.find(params[:id])
 	end
 
-	def start_client_update
+	def create
 		FetchRcxClientsJob.perform_later(current_user)
 		redirect_to rcx_clients_path
 	end

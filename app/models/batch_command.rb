@@ -24,9 +24,7 @@ class BatchCommand < ActiveRecord::Base
 
 	def set_index
 		if index.nil?
-			#TODO!!!
 			self.index = ((batch.batch_commands.map {|bc| bc.index}).max || 0) + 1
-			puts "!!!!!!! Index #{index}!!!!!!!"
 		end
 	end
 end

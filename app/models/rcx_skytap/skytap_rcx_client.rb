@@ -6,12 +6,12 @@ class RcxSkytap::SkytapRcxClient < RcxClient
 
 		case skytap_vm.runstate
 		when 'stopped', 'suspended'
-			skytap_vm.runstate = 'running'
+			skytap_vm.update('running')
 			skytap_vm.save
 		when 'running'
 			return
 		else
-			raise "Cannot awaken in runstate #{skytap_vm.runstate}"
+			raise "Unknown runstate #{skytap_vm.runstate}"
 		end
 	end
 
@@ -42,7 +42,7 @@ class RcxSkytap::SkytapRcxClient < RcxClient
 			end
 		end
 
-		vms.uniq {|vm| vm.id }.map { |vm| vm.to_skytap_rcx_client_for_user(user) }
+		vms.uniq {|vm| vm.id }.map { |vm| vm.to_skytap_rcx_client_for_user(user) }.compact
 	end	
 
 	def self.set_skytap_credentials_for(user)

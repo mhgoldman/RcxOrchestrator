@@ -42,7 +42,7 @@ class ClientBatchCommand < ActiveRecord::Base
 
 	def blocked?
 		previous = previous_client_batch_command
-		!!previous && (previous.errored? || previous.blocked?)
+		previous && (previous.errored? || previous.blocked?)
 	end
 
 	def started?
@@ -98,7 +98,7 @@ class ClientBatchCommand < ActiveRecord::Base
 	end
 
 	def callback_url
-		Rails.application.routes.url_helpers.client_batch_command_url(self, host: RcxOrchestrator::Application.config.rcx_callback_host)
+		Rails.application.routes.url_helpers.client_batch_command_url(self, host: Rails.application.config.rcx_callback_host)
 	end
 
 	def process_callback(result)

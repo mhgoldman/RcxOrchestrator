@@ -3,13 +3,12 @@
 
 <%= form_for @batch, url: wizard_path do |form| %>
 	<div class="field form-group">
-		<%= form.label :clients %><br/>
 		<% current_user.rcx_clients.each do |rcx_client| %>
 			<%= check_box_tag "batch[rcx_client_ids][]", rcx_client.id, @batch.rcx_client_ids.include?(rcx_client.id) %>
 			<%= rcx_client.display_name %><br/>
 		<% end %>
 	</div>
 	<div>
-		<%= form.submit %>
+		<%= form.submit "Select Commands" %>
 	</div>
 <% end %>
