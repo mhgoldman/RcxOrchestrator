@@ -11,18 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150109173332) do
+ActiveRecord::Schema.define(version: 20150113032409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "batch_commands", force: :cascade do |t|
-    t.integer  "batch_id"
-    t.integer  "command_id"
-    t.integer  "index"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "batches", force: :cascade do |t|
     t.string   "name"
@@ -40,28 +32,26 @@ ActiveRecord::Schema.define(version: 20150109173332) do
   add_index "batches_clients", ["batch_id"], name: "index_batches_clients_on_batch_id", using: :btree
   add_index "batches_clients", ["client_id"], name: "index_batches_clients_on_client_id", using: :btree
 
-  create_table "client_batch_commands", force: :cascade do |t|
+  create_table "client_batches", force: :cascade do |t|
     t.integer  "client_id"
-    t.integer  "batch_command_id"
+    t.integer  "batch_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "client_steps", force: :cascade do |t|
+    t.integer  "client_id"
+    t.integer  "step_id"
     t.string   "client_guid"
     t.text     "standard_output"
     t.text     "standard_error"
     t.boolean  "has_exited"
     t.integer  "exit_code"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "error"
     t.string   "callback_token"
-    t.boolean  "fatally_errored",  default: false
-  end
-
-  create_table "commands", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "path"
-    t.string   "args"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "fatally_errored", default: false
   end
 
   create_table "clients", force: :cascade do |t|
@@ -73,6 +63,23 @@ ActiveRecord::Schema.define(version: 20150109173332) do
     t.string   "skytap_config_url"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "commands", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "path"
+    t.string   "args"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.integer  "batch_id"
+    t.integer  "command_id"
+    t.integer  "index"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

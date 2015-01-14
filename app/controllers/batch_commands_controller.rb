@@ -1,2 +1,0 @@
-class BatchCommandsController < ApplicationController
-end

@@ -23,7 +23,7 @@ class AfterBatchCreationController < ApplicationController
 			@batch.update(client_ids: params[:batch][:client_ids])
 			render_wizard @batch		
 		when :select_commands
-			@batch.batch_commands.create(command_id: params[:command_id_for_new_batch_command])
+			@batch.steps.create(command_id: params[:command_id_for_new_step])
 			render_wizard
 		when :finish
 			if params[:start_batch]

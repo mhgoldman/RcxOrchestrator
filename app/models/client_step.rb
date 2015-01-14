@@ -1,7 +1,7 @@
-class ClientBatchCommand < ActiveRecord::Base
+class ClientStep < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
-	belongs_to :batch_command
+	belongs_to :step
 	belongs_to :client	
 
 	before_create :set_callback_token
@@ -41,8 +41,8 @@ class ClientBatchCommand < ActiveRecord::Base
 	end
 
 	def blocked?
-		previous = previous_client_batch_command
-		previous && (previous.errored? || previous.blocked?)
+		p = previous
+		p && (p.errored? || p.blocked?)
 	end
 
 	def started?
@@ -74,7 +74,7 @@ class ClientBatchCommand < ActiveRecord::Base
 	end
 
 	def exists?
-		ClientBatchCommand.exists?(id)
+		ClientStep.exists?(id)
 	end
 
 	def fatally_errored!
@@ -85,12 +85,12 @@ class ClientBatchCommand < ActiveRecord::Base
 		fatally_errored
 	end
 
-	def next_client_batch_command
-		relative_client_batch_command(1)
+	def next
+		step.index >= (siblings.length-1) ? nil : siblings[step.index+1]
 	end
 
-	def previous_client_batch_command
-		relative_client_batch_command(-1)
+	def previous
+		step.index <= 0 ? nil : siblings[step.index-1]
 	end
 
 	def reset_status
@@ -98,7 +98,7 @@ class ClientBatchCommand < ActiveRecord::Base
 	end
 
 	def callback_url
-		Rails.application.routes.url_helpers.client_batch_command_url(self, host: Rails.application.config.rcx_callback_host)
+		Rails.application.routes.url_helpers.client_step_url(self, host: Rails.application.config.rcx_callback_host)
 	end
 
 	def process_callback(result)
@@ -114,6 +114,10 @@ class ClientBatchCommand < ActiveRecord::Base
 
 	private
 
+	def siblings
+		self.class.where(client: client, step: step.batch.steps).joins(:step).order('steps.index')
+	end
+
 	def update_from_client_result(result)
 		self.client_guid = result['Guid']
 		self.has_exited = result['HasExited']
@@ -121,11 +125,6 @@ class ClientBatchCommand < ActiveRecord::Base
 		self.standard_error = result['StandardError']
 		self.standard_output = result['StandardOutput']
 		save!
-	end	
-
-	def relative_client_batch_command(offset)
-		relative = batch_command.batch.batch_commands.find_by(index: batch_command.index + offset)
-		ClientBatchCommand.find_by(client: client, batch_command_id: relative)
 	end	
 
 	def set_callback_token

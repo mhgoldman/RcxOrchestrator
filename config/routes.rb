@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resources :after_batch_creation
   end
 
-  resources :batch_commands
-  resources :client_batch_commands
+  resources :steps
+  resources :client_steps
 
   get 'welcome/index'
 

@@ -5,15 +5,15 @@
 <%= render 'clients/clients_list', clients: @batch.clients %>
 
 <h3>Commands</h3>
-<%= render 'batch_commands/steps_list', batch_commands: @batch.batch_commands, statuses: false %>
+<%= render 'steps/steps_list', steps: @batch.steps, statuses: false %>
 
 <h3>New Command</h3>
 <%= form_for @batch, url: wizard_path do |form| %>
 	<div class="field form-group">
-		<%= select_tag "command_id_for_new_batch_command", options_from_collection_for_select(Command.all, "id", "name") %>
+		<%= select_tag "command_id_for_new_step", options_from_collection_for_select(Command.all, "id", "name") %>
 	</div>
 	<div>
 		<%= form.submit 'Add Command' %>
-		<%= ('or ' + (link_to 'Finished', batch_after_batch_creation_path(@batch.id, :finish))).html_safe unless @batch.batch_commands.empty? %>
+		<%= ('or ' + (link_to 'Finished', batch_after_batch_creation_path(@batch.id, :finish))).html_safe unless @batch.steps.empty? %>
 </div>
 <% end %>

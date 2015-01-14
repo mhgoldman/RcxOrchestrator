@@ -1,0 +1,34 @@
+<h2>
+<% if @step %>
+	<%= batch_link_for(@batch) %> &gt; <%= @command.name %>
+<% else %>
+	<%= batch_link_for(@batch) %> &gt; <%= @client.display_name %>
+<% end %>
+</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<% if @step %>
+				<th>Client</th>
+			<% else %>
+				<th>Index</th>
+					<th>Command</th>
+			<% end %>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @client_steps.each do |client_step| %>
+			<tr>
+				<% if @step %>				
+					<td><%= client_link_for(client_step.client) %></td>
+				<% else %>
+					<td><%= client_step.step.index %></td>
+					<td><%= command_link_for(client_step.step.command) %></td>
+				<%end %>
+				<td><%= client_step_status_link_for(client_step) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

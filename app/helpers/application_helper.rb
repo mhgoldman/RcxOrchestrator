@@ -6,7 +6,7 @@ module ApplicationHelper
 			'unlocks' => 'Log In',
 			'commands' => 'Commands',
 			'batches' => 'My Batches',
-			'client_batch_commands' => 'My Batches'
+			'client_steps' => 'My Batches'
 		}
 		
 		if link_text == controller_map[controller.controller_name]
