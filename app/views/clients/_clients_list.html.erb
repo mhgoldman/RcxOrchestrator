@@ -15,7 +15,7 @@
 				<td><%= client_link_for(client) %></td>
 				<td><%= client.class.display_name %></td>
 				<% if defined?(batch) %>				
-					<td><%= link_to batch_client_status_for(batch, client), client_steps_path(batch_id: @batch, client_id: client) %></td>
+					<td><%= link_to batch_client_status_for(batch, client), invocations_path(batch_id: @batch, client_id: client) %></td>
 				<% end %>
 			</tr>
 		<% end %>

@@ -8,9 +8,9 @@ class Batch < ActiveRecord::Base
 
 	def start
 		update(started: true)
-		generate_client_steps
-		steps.first.client_steps.each do |client_step|
-			AwakenJob.perform_later client_step
+		generate_invocations
+		steps.first.invocations.each do |invocation|
+			AwakenJob.perform_later invocation
 		end
 	end
 
@@ -24,31 +24,31 @@ class Batch < ActiveRecord::Base
 	end
 
 	def over_for_client?(client)
-		client_steps_by_client(client).each {|cbc| return false unless cbc.over? }
+		invocations_by_client(client).each {|cbc| return false unless cbc.over? }
 		true
 	end
 
-	def client_client_steps_count_by_status(client)
+	def client_invocations_count_by_status(client)
 		counts = {}
-		ClientStep::STATUSES.each do |status|
-			client_steps = client_steps_by_client(client)
-			counts[status] = client_steps.select {|cbc| cbc.status == status }.count
+		Invocation::STATUSES.each do |status|
+			invocations = invocations_by_client(client)
+			counts[status] = invocations.select {|cbc| cbc.status == status }.count
 		end
 
 		counts		
 	end
 
-	def client_steps_by_client(client)
-		steps.map {|step| ClientStep.find_by(step: step, client: client) }
+	def invocations_by_client(client)
+		steps.map {|step| Invocation.find_by(step: step, client: client) }
 	end
 
 	private
 	
-	def generate_client_steps
+	def generate_invocations
 		steps.each do |step|
-			step.client_steps.destroy_all				
+			step.invocations.destroy_all				
 			clients.each do |client|
-				step.client_steps.create(client: client)
+				step.invocations.create(client: client)
 			end
 		end
 	end

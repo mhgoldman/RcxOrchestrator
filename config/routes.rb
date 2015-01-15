@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :steps
-  resources :client_steps
+  resources :invocations
 
   get 'welcome/index'
 

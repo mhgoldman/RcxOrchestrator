@@ -15,7 +15,7 @@
 				<td><%= step.index %></td>
 				<td><%= link_to step.command.name, step.command %></td>
 				<% unless defined?(statuses) && !statuses %>
-					<td><%= link_to step_status_for(step), client_steps_path(step_id: step) %></td>
+					<td><%= link_to step_status_for(step), invocations_path(step_id: step) %></td>
 				<% end %>
 			</tr>
 		<% end %>

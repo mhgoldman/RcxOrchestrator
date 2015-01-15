@@ -20,4 +20,8 @@
 	</tbody>
 </table>
 
-<%= link_to 'New Batch', new_batch_path %>
+<% if can_create_batch? %>
+	<%= link_to 'New Batch', new_batch_path %>
+<% else %>
+	To create a batch, ensure that you have added some <%= link_to 'clients', clients_path %> and some <%= link_to 'commands', commands_path %>.
+<% end %>

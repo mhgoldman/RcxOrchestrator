@@ -6,7 +6,7 @@ module ApplicationHelper
 			'unlocks' => 'Log In',
 			'commands' => 'Commands',
 			'batches' => 'My Batches',
-			'client_steps' => 'My Batches'
+			'invocations' => 'My Batches'
 		}
 		
 		if link_text == controller_map[controller.controller_name]
@@ -39,6 +39,10 @@ module ApplicationHelper
   end
 
   def print_blankable(str)
-  	(str && !str.blank?) ? str.gsub("\n", "<br/>").html_safe : "<em>n/a</em>".html_safe
+  	if (str.nil? || str.empty?)
+  		content_tag("em", "N/A")
+  	else
+  		content_tag("pre", str)
+	  end
   end
 end

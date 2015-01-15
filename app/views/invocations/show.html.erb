@@ -2,29 +2,29 @@
 
 <div class="attribute">
 	<div class="attribute-name">Status</div>
-	<div class="attribute-value"><%= client_step_status_for(@client_step) %></div>
+	<div class="attribute-value"><%= invocation_status_for(@invocation) %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Last Updated</div>
-	<div class="attribute-value"><%= @client_step.updated_at %></div>
+	<div class="attribute-value"><%= @invocation.updated_at %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Remote Standard Output</div>
-	<div class="attribute-value"><%= print_blankable(@client_step.standard_output) %></div>
+	<div class="attribute-value"><%= print_blankable(@invocation.standard_output) %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Remote Standard Error</div>
-	<div class="attribute-value"><%= print_blankable(@client_step.standard_error) %></div>
+	<div class="attribute-value"><%= print_blankable(@invocation.standard_error) %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Local Error</div>
-	<div class="attribute-value"><%= print_blankable(@client_step.error) %></div>
+	<div class="attribute-value"><%= print_blankable(@invocation.error) %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Local ID</div>
-	<div class="attribute-value"><%= @client_step.id %></div>
+	<div class="attribute-value"><%= @invocation.id %></div>
 </div>
 <div class="attribute">
 	<div class="attribute-name">Remote ID</div>
-	<div class="attribute-value"><%= @client_step.client_guid %></div>
+	<div class="attribute-value"><%= @invocation.client_guid %></div>
 </div>

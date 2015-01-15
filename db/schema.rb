@@ -39,21 +39,6 @@ ActiveRecord::Schema.define(version: 20150113032409) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "client_steps", force: :cascade do |t|
-    t.integer  "client_id"
-    t.integer  "step_id"
-    t.string   "client_guid"
-    t.text     "standard_output"
-    t.text     "standard_error"
-    t.boolean  "has_exited"
-    t.integer  "exit_code"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "error"
-    t.string   "callback_token"
-    t.boolean  "fatally_errored", default: false
-  end
-
   create_table "clients", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "display_name"
@@ -72,6 +57,21 @@ ActiveRecord::Schema.define(version: 20150113032409) do
     t.string   "args"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "invocations", force: :cascade do |t|
+    t.integer  "client_id"
+    t.integer  "step_id"
+    t.string   "client_guid"
+    t.text     "standard_output"
+    t.text     "standard_error"
+    t.boolean  "has_exited"
+    t.integer  "exit_code"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "error"
+    t.string   "callback_token"
+    t.boolean  "fatally_errored", default: false
   end
 
   create_table "steps", force: :cascade do |t|

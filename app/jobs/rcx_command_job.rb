@@ -12,11 +12,11 @@ class RcxCommandJob < ActiveJob::Base
   end
 
   def reschedule
-    self.class.set(wait: POLL_INTERVAL.seconds).perform_later(@client_step, @work_has_started, remaining_timeout_period)
+    self.class.set(wait: POLL_INTERVAL.seconds).perform_later(@invocation, @work_has_started, remaining_timeout_period)
   end
 
   def reschedulable?
-    @client_step.exists? && !work_has_started? && !timed_out?
+    @invocation.exists? && !work_has_started? && !timed_out?
   end
 
   def work_has_started?
@@ -35,15 +35,15 @@ class RcxCommandJob < ActiveJob::Base
     raise 'Not implemented'
   end
 
-  def perform(client_step, work_has_started, timeout)
+  def perform(invocation, work_has_started, timeout)
     begin
-      @client_step = client_step
+      @invocation = invocation
       @timeout = timeout
       @work_has_started = work_has_started
 
-      logger.debug "#{self.class}: client_step=#{@client_step}, timeout=#{@timeout}"
+      logger.debug "#{self.class}: invocation=#{@invocation}, timeout=#{@timeout}"
 
-      raise "ClientStep does not exist" unless @client_step.exists?
+      raise "Invocation does not exist" unless @invocation.exists?
         
       (start_work && @work_has_started = true) unless @work_has_started
 
@@ -56,13 +56,13 @@ class RcxCommandJob < ActiveJob::Base
       end
     rescue StandardError => ex
       begin
-          error = "#{ex.class} while performing #{self}: #{ex}\n#{ex.backtrace.join("\n")} This job is #{reschedulable? ? 'will' : 'will not'} be rescheduled."
+          error = "#{ex.class} while performing #{self}: #{ex}\n#{ex.backtrace.join("\n")} This job #{reschedulable? ? 'will' : 'will not'} be rescheduled."
           logger.error error
-          @client_step.append_error(error) rescue nil          
+          @invocation.append_error(error) rescue nil          
           if reschedulable?
             reschedule
           else
-            @client_step.fatally_errored!
+            @invocation.fatally_errored!
           end
       rescue
         # Swallow exceptions in exception handling so they don't bubble up to ÅctiveJob

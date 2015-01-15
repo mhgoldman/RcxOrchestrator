@@ -1,4 +1,6 @@
 class BatchesController < ApplicationController
+	helper_method :can_create_batch?
+	
 	def index
 		@batches = current_user.batches.started.order("id DESC")
 	end
@@ -8,6 +10,8 @@ class BatchesController < ApplicationController
 	end
 
 	def new
+		raise 'No clients and/or commands available' unless can_create_batch?
+
 		@batch = Batch.new
 	end
 
@@ -20,6 +24,13 @@ class BatchesController < ApplicationController
 			render 'new'
 		end
 	end
+
+
+	def can_create_batch?
+		current_user.clients.any? && Command.any?
+	end
+
+	private
 
 	def batch_params
 		params.require(:batch).permit(:name)

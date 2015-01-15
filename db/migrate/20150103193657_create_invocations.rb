@@ -1,6 +1,6 @@
-class CreateClientSteps < ActiveRecord::Migration
+class CreateInvocations < ActiveRecord::Migration
   def change
-    create_table :client_steps do |t|
+    create_table :invocations do |t|
       t.integer :client_id
       t.integer :step_id
       t.string :client_guid

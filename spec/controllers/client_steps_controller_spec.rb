@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe ClientStepsController, :type => :controller do
+RSpec.describe InvocationsController, :type => :controller do
 
 end

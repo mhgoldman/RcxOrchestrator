@@ -1,8 +1,8 @@
-class ClientStep < ActiveRecord::Base
+class Invocation < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
 	belongs_to :step
-	belongs_to :client	
+	belongs_to :client
 
 	before_create :set_callback_token
 
@@ -74,7 +74,7 @@ class ClientStep < ActiveRecord::Base
 	end
 
 	def exists?
-		ClientStep.exists?(id)
+		Invocation.exists?(id)
 	end
 
 	def fatally_errored!
@@ -98,7 +98,7 @@ class ClientStep < ActiveRecord::Base
 	end
 
 	def callback_url
-		Rails.application.routes.url_helpers.client_step_url(self, host: Rails.application.config.rcx_callback_host)
+		Rails.application.routes.url_helpers.invocation_url(self, host: Rails.application.config.rcx_callback_host)
 	end
 
 	def process_callback(result)

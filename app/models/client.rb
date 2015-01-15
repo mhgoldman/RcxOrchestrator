@@ -1,6 +1,6 @@
 class Client < ActiveRecord::Base
 	has_and_belongs_to_many :batches	
-	has_many :client_steps, dependent: :destroy
+	has_many :invocations, dependent: :destroy
 	belongs_to :user
 
 	validates :user, presence: true
@@ -32,10 +32,10 @@ class Client < ActiveRecord::Base
 		end
 	end
 
-	def invoke(client_step)
-		callback_url = client_step.callback_url
-		callback_token = client_step.callback_token		
-		command = client_step.step.command
+	def invoke(invocation)
+		callback_url = invocation.callback_url
+		callback_token = invocation.callback_token		
+		command = invocation.step.command
 		path = command.path
 		args = command.args.is_a?(String) ? command.args.split : args 
 		invoke_result_json = agent_endpoint['Rcx/commands'].post({path: path, args: args, callbackUrl: callback_url, callbackToken: callback_token}.to_json, content_type: :json)

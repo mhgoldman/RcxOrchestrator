@@ -19,15 +19,15 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @client_steps.each do |client_step| %>
+		<% @invocations.each do |invocation| %>
 			<tr>
 				<% if @step %>				
-					<td><%= client_link_for(client_step.client) %></td>
+					<td><%= client_link_for(invocation.client) %></td>
 				<% else %>
-					<td><%= client_step.step.index %></td>
-					<td><%= command_link_for(client_step.step.command) %></td>
+					<td><%= invocation.step.index %></td>
+					<td><%= command_link_for(invocation.step.command) %></td>
 				<%end %>
-				<td><%= client_step_status_link_for(client_step) %></td>
+				<td><%= invocation_status_link_for(invocation) %></td>
 			</tr>
 		<% end %>
 	</tbody>
