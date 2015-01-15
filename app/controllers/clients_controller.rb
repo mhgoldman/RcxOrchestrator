@@ -9,6 +9,6 @@ class ClientsController < ApplicationController
 
 	def create
 		FetchClientsJob.perform_later(current_user)
-		redirect_to clients_path
+		redirect_to clients_path, notice: "Client fetch started"
 	end
 end
