@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150113032409) do
+ActiveRecord::Schema.define(version: 20150121110112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,14 +23,6 @@ ActiveRecord::Schema.define(version: 20150113032409) do
     t.datetime "updated_at",                 null: false
     t.boolean  "started",    default: false
   end
-
-  create_table "batches_clients", id: false, force: :cascade do |t|
-    t.integer "batch_id"
-    t.integer "client_id"
-  end
-
-  add_index "batches_clients", ["batch_id"], name: "index_batches_clients_on_batch_id", using: :btree
-  add_index "batches_clients", ["client_id"], name: "index_batches_clients_on_client_id", using: :btree
 
   create_table "client_batches", force: :cascade do |t|
     t.integer  "client_id"
@@ -60,7 +52,6 @@ ActiveRecord::Schema.define(version: 20150113032409) do
   end
 
   create_table "invocations", force: :cascade do |t|
-    t.integer  "client_id"
     t.integer  "step_id"
     t.string   "client_guid"
     t.text     "standard_output"
@@ -72,6 +63,7 @@ ActiveRecord::Schema.define(version: 20150113032409) do
     t.string   "error"
     t.string   "callback_token"
     t.boolean  "fatally_errored", default: false
+    t.integer  "client_batch_id"
   end
 
   create_table "steps", force: :cascade do |t|

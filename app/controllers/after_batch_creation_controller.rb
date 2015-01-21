@@ -20,7 +20,7 @@ class AfterBatchCreationController < ApplicationController
 
 		case step
 		when :select_clients
-			@batch.update(client_ids: params[:batch][:client_ids])
+			@batch.create_client_batches(params[:batch][:client_ids])
 			render_wizard @batch		
 		when :select_commands
 			@batch.steps.create(command_id: params[:command_id_for_new_step])

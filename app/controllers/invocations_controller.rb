@@ -11,7 +11,7 @@ class InvocationsController < ApplicationController
 		elsif params[:batch_id] && params[:client_id]
 			@client = Client.find(params[:client_id])
 			@batch = Batch.find(params[:batch_id])
-			@invocations = @batch.invocations_by_client(@client)
+			@invocations = ClientBatch.get(@client, @batch).invocations
 
 			@client_name = @client.display_name
 		end

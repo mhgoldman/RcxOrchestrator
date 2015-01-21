@@ -1,6 +1,9 @@
 module BatchesHelper
 	def batch_client_status_for(batch, client)
-		(batch.over_for_client?(client) ? "Finished" : "In Progress") + " (" + batch.client_invocations_count_by_status(client).map {|k,v| "#{v} #{k}"}.join(", ") + ")"
+		cb = ClientBatch.get(client, batch)
+		(cb.over? ? "Finished" : "In Progress") + " (" + 
+			cb.invocations_count_by_status.map {|k,v| "#{v} #{k}"}.join(", ") + 
+			")"
 	end	
 
 	def batch_status_for(batch)

@@ -2,13 +2,13 @@ class Step < ActiveRecord::Base
 	belongs_to :batch
 	belongs_to :command
 	has_many :invocations, dependent: :destroy
+
 	before_validation :set_index
 
 	validates :index, presence: true, uniqueness: { scope: :batch }
 
 	def over?
-		invocations.each {|cbc| return false unless cbc.over? }
-		true
+		Util.over?(invocations)
 	end
 
 	def invocations_count_by_status

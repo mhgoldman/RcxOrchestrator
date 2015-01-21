@@ -1,6 +1,5 @@
 class Client < ActiveRecord::Base
-	has_and_belongs_to_many :batches	
-	has_many :invocations, dependent: :destroy
+	has_many :client_batches
 	belongs_to :user
 
 	validates :user, presence: true

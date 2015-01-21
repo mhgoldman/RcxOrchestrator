@@ -2,7 +2,10 @@ class Invocation < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
 	belongs_to :step
-	belongs_to :client
+	belongs_to :client_batch
+
+	delegate :client, to: :client_batch
+	delegate :index, to: :step
 
 	before_create :set_callback_token
 
@@ -86,11 +89,11 @@ class Invocation < ActiveRecord::Base
 	end
 
 	def next
-		step.index >= (siblings.length-1) ? nil : siblings[step.index+1]
+		index >= (siblings.length-1) ? nil : siblings[index+1]
 	end
 
 	def previous
-		step.index <= 0 ? nil : siblings[step.index-1]
+		index <= 0 ? nil : siblings[index-1]
 	end
 
 	def reset_status
@@ -115,7 +118,7 @@ class Invocation < ActiveRecord::Base
 	private
 
 	def siblings
-		self.class.where(client: client, step: step.batch.steps).joins(:step).order('steps.index')
+		client_batch.invocations.sort_by {|i| i.index}
 	end
 
 	def update_from_client_result(result)
