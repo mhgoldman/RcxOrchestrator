@@ -23,7 +23,7 @@ class ClientBatch < ActiveRecord::Base
 
 	def create_invocations
 		invocations.destroy_all
-		
+
 		batch.steps.each do |step|
 			invocations.create(step: step)
 		end

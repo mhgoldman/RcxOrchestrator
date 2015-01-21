@@ -41,5 +41,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  config.rcx_callback_host ='60b8b68e.ngrok.com'
+  config.rcx_callback_url_options = { host: '10.211.55.2', port: 3000 }
+
 end

@@ -1,6 +1,9 @@
 class Invocation < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
+	#TODO! BROKEN! If this won't work, put back sort wherever invocations are listed!
+	#default_scope { joins(:step).order('step.index')}
+
 	belongs_to :step
 	belongs_to :client_batch
 
@@ -101,7 +104,7 @@ class Invocation < ActiveRecord::Base
 	end
 
 	def callback_url
-		Rails.application.routes.url_helpers.invocation_url(self, host: Rails.application.config.rcx_callback_host)
+		Rails.application.routes.url_helpers.invocation_url(self, Rails.application.config.rcx_callback_url_options)
 	end
 
 	def process_callback(result)
@@ -118,7 +121,7 @@ class Invocation < ActiveRecord::Base
 	private
 
 	def siblings
-		client_batch.invocations.sort_by {|i| i.index}
+		client_batch.invocations.sort_by(&:index)
 	end
 
 	def update_from_client_result(result)
