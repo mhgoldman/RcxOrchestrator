@@ -1,8 +1,7 @@
 class Invocation < ActiveRecord::Base
 	STATUSES = [:finished, :running, :queued, :errored, :blocked]
 
-	#TODO! BROKEN! If this won't work, put back sort wherever invocations are listed!
-	#default_scope { joins(:step).order('step.index')}
+	default_scope { joins(:step).order('steps.index') }
 
 	belongs_to :step
 	belongs_to :client_batch
@@ -121,7 +120,7 @@ class Invocation < ActiveRecord::Base
 	private
 
 	def siblings
-		client_batch.invocations.sort_by(&:index)
+		client_batch.invocations
 	end
 
 	def update_from_client_result(result)

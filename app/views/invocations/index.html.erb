@@ -19,7 +19,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @invocations.sort_by(&:index).each do |invocation| %>
+		<% @invocations.each do |invocation| %>
 			<tr>
 				<% if @step %>				
 					<td><%= client_link_for(invocation.client) %></td>
