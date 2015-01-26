@@ -10,13 +10,15 @@ class Batch < ActiveRecord::Base
 	validates :user, presence: true
 
 	def start
-		update(started: true)
+		previously_started = started
+
+		update(started: true) unless previously_started
 		create_invocations
 
-		#TODO... the reload smells but not sure what to do about it.
-		#there's a problem only when we start the same batch multiple times from the same object reference (from console)
-		#when you do that, the old invocations are cached and we end up trying to invoke those instead of the new ones.		
-		steps.first.invocations.reload.each do |invocation|
+		first_step_invocations = steps.first.invocations
+		first_step_invocations.reload if previously_started
+
+		first_step_invocations.each do |invocation|
 			AwakenJob.perform_later invocation
 		end
 	end
