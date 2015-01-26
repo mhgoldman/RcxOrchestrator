@@ -1,6 +1,4 @@
 class User < ActiveRecord::Base
-  FETCH_CLIENTS_MAX_DURATION = 10.minutes
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable, :timeoutable
@@ -11,25 +9,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  has_many :clients do
-    def fetch!
-      user = self.proxy_association.owner
-      raise "FetchClients already in progress for #{user}" if user.clients_update_finished_at.nil? && 
-        (!user.clients_update_started_at.nil? && user.clients_update_started_at <= FETCH_CLIENTS_MAX_DURATION.ago)
-
-      begin
-        user.update(clients_update_started_at: Time.now, clients_update_finished_at: nil)
-        Client.fetch_for_user!(user)
-      ensure
-        user.update(clients_update_finished_at: Time.now)   
-      end
-    end
-
-    def fetching?
-      user = self.proxy_association.owner
-      user.clients_update_finished_at.nil? && !user.clients_update_started_at.nil?
-    end
-  end
+  has_one :clients_collection, dependent: :destroy
+  after_create :create_clients_collection
+  delegate :clients, to: :clients_collection
+  delegate :update_started_at, to: :clients_collection, prefix: :clients
+  delegate :update_finished_at, to: :clients_collection, prefix: :clients
 
   def self.rcx_user_attributes
     User.attribute_names.select {|name| name.start_with?("rcx_")}.map {|name| name.to_sym}

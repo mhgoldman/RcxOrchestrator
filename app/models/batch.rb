@@ -12,7 +12,11 @@ class Batch < ActiveRecord::Base
 	def start
 		update(started: true)
 		create_invocations
-		steps.first.invocations.each do |invocation|
+
+		#TODO... the reload smells but not sure what to do about it.
+		#there's a problem only when we start the same batch multiple times from the same object reference (from console)
+		#when you do that, the old invocations are cached and we end up trying to invoke those instead of the new ones.		
+		steps.first.invocations.reload.each do |invocation|
 			AwakenJob.perform_later invocation
 		end
 	end

@@ -13,7 +13,7 @@ class RcxSkytap::Skytap::Vm
 			return nil #no published service, no rcx client
 		end
 
-		RcxSkytap::SkytapClient.new( { display_name: "#{configuration.name}\\#{name}", user: user, skytap_vm_id: id,
-			skytap_config_url: configuration_url, agent_endpoint_url: agent_endpoint_url } )
+		RcxSkytap::SkytapClient.new( { display_name: "#{configuration.name}\\#{name}", clients_collection: user.clients_collection, 
+			skytap_vm_id: id,	skytap_config_url: configuration_url, agent_endpoint_url: agent_endpoint_url } )
 	end		
 end

@@ -1,10 +1,8 @@
 class Client < ActiveRecord::Base
 	has_many :client_batches
-	belongs_to :user
+	belongs_to :clients_collection
 
-	validates :user, presence: true
-
-	validates :agent_endpoint_url, uniqueness: { scope: [:display_name, :user, :type] }
+	validates :agent_endpoint_url, uniqueness: { scope: [:display_name, :clients_collection, :type] }
 
 	class << self
 		attr_reader :display_name
@@ -12,7 +10,7 @@ class Client < ActiveRecord::Base
 
 	def self.fetch_for_user!(user)
 		new_clients = Client.fetch_for_user(user)
-		user.update(clients: new_clients)
+		user.clients_collection.update(clients: new_clients)
 	end
 
 	### "Abstract" (platform specific) Methods
@@ -63,7 +61,6 @@ class Client < ActiveRecord::Base
 
 			client_type_class_name = client_type.to_s.camelize
 			client_type_class = client_type_class_name.constantize
-
 			#begin
 				clients_for_this_type = client_type_class.fetch_for_user(user)
 				clients_for_this_type.each do |new_client|

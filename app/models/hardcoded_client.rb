@@ -8,7 +8,7 @@ class HardcodedClient < Client
 	
 	def self.fetch_for_user(user)
 		[ 
-			HardcodedClient.new(display_name: "My Parallels VM", agent_endpoint_url: "http://10.211.55.3:8789/", user: user)
+			HardcodedClient.new(display_name: "My Parallels VM", agent_endpoint_url: "http://10.211.55.3:8789/", clients_collection: user.clients_collection)
 		]
 	end	
 end

@@ -7,7 +7,6 @@ class ClientBatch < ActiveRecord::Base
 		Util.over?(invocations)
 	end
 
-
 	def invocations_count_by_status
 		counts = {}
 		Invocation::STATUSES.each do |status|

@@ -6,7 +6,7 @@ class RcxSkytap::SkytapClient < Client
 
 		case skytap_vm.runstate
 		when 'stopped', 'suspended'
-			skytap_vm.update('running')
+			skytap_vm.runstate = 'running'
 			skytap_vm.save
 		when 'running'
 			return
@@ -15,10 +15,12 @@ class RcxSkytap::SkytapClient < Client
 		end
 	end
 
-	private
+#	private
 
 	def get_skytap_vm
 		# Note: we don't store this in an instance variable because the VM statuses change all the time. We always need a fresh copy.
+
+		user = clients_collection.user
 
 		self.class.set_skytap_credentials_for(user)
 
