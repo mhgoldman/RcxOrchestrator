@@ -16,9 +16,7 @@ class Batch < ActiveRecord::Base
 		create_invocations
 
 		first_step_invocations = steps.first.invocations
-		first_step_invocations.reload if previously_started
-
-		first_step_invocations.each do |invocation|
+		(previously_started ? first_step_invocations.reload : first_step_invocations).each do |invocation|
 			AwakenJob.perform_later invocation
 		end
 	end
