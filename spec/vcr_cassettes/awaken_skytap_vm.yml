@@ -1,0 +1,3046 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '86'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDY5NCwic2Vzc2lvbl9pZCI6IjNhNzU4OGU0ZGQ1ODEzZDQwNDMxMTcxNDlmMjE4NTc2IiwiX2NzcmZfdG9rZW4iOiJIWjhwMWRuMS9SNEsrK1VaUWZuQnhFczNtVmUzV3RSeGlOTVdXRHhWWUVVPSJ9--78178d4c1e25ddf81461b569c9d01a340bc31385;
+        path=/; secure
+      Etag:
+      - W/"af2f602c3a8d77315e737d64dd830daf"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"3350092","url":"https://cloud.skytap.com/configurations/3350092","name":"25670-CXA-999-2","error":""},{"id":"3350084","url":"https://cloud.skytap.com/configurations/3350084","name":"25670-CXA-999-1","error":""},{"id":"3350080","url":"https://cloud.skytap.com/configurations/3350080","name":"18703-CXA-999-2","error":""},{"id":"3350076","url":"https://cloud.skytap.com/configurations/3350076","name":"18703-CXA-999-1","error":""},{"id":"3350036","url":"https://cloud.skytap.com/configurations/3350036","name":"25670-CXA-999-2","error":""},{"id":"3350032","url":"https://cloud.skytap.com/configurations/3350032","name":"25670-CXA-999-1","error":""},{"id":"3350024","url":"https://cloud.skytap.com/configurations/3350024","name":"18703-CXA-999-2","error":""},{"id":"3350016","url":"https://cloud.skytap.com/configurations/3350016","name":"18703-CXA-999-1","error":""},{"id":"3349932","url":"https://cloud.skytap.com/configurations/3349932","name":"18703-CXA-999-1","error":""},{"id":"3349900","url":"https://cloud.skytap.com/configurations/3349900","name":"18703-CXA-999-1","error":""},{"id":"3348024","url":"https://cloud.skytap.com/configurations/3348024","name":"25670-CXA-999-2","error":""},{"id":"3348020","url":"https://cloud.skytap.com/configurations/3348020","name":"25670-CXA-999-1","error":""},{"id":"3348012","url":"https://cloud.skytap.com/configurations/3348012","name":"18703-CXA-999-2","error":""},{"id":"3348004","url":"https://cloud.skytap.com/configurations/3348004","name":"18703-CXA-999-1","error":""},{"id":"3347980","url":"https://cloud.skytap.com/configurations/3347980","name":"25670-CXA-999-2","error":""},{"id":"3347976","url":"https://cloud.skytap.com/configurations/3347976","name":"25670-CXA-999-1","error":""},{"id":"3347972","url":"https://cloud.skytap.com/configurations/3347972","name":"18703-CXA-999-2","error":""},{"id":"3347968","url":"https://cloud.skytap.com/configurations/3347968","name":"18703-CXA-999-1","error":""},{"id":"3347900","url":"https://cloud.skytap.com/configurations/3347900","name":"25670-CXA-999-2","error":""},{"id":"3347892","url":"https://cloud.skytap.com/configurations/3347892","name":"25670-CXA-999-1","error":""},{"id":"3347888","url":"https://cloud.skytap.com/configurations/3347888","name":"18703-CXA-999-2","error":""},{"id":"3347880","url":"https://cloud.skytap.com/configurations/3347880","name":"18703-CXA-999-1","error":""},{"id":"3347876","url":"https://cloud.skytap.com/configurations/3347876","name":"25670-CXA-999-2","error":""},{"id":"3347872","url":"https://cloud.skytap.com/configurations/3347872","name":"25670-CXA-999-1","error":""},{"id":"3347864","url":"https://cloud.skytap.com/configurations/3347864","name":"18703-CXA-999-2","error":""},{"id":"3347860","url":"https://cloud.skytap.com/configurations/3347860","name":"18703-CXA-999-1","error":""},{"id":"3347804","url":"https://cloud.skytap.com/configurations/3347804","name":"25670-CXA-999-2","error":""},{"id":"3347792","url":"https://cloud.skytap.com/configurations/3347792","name":"25670-CXA-999-1","error":""},{"id":"3347788","url":"https://cloud.skytap.com/configurations/3347788","name":"18703-CXA-999-2","error":""},{"id":"3347784","url":"https://cloud.skytap.com/configurations/3347784","name":"18703-CXA-999-1","error":""},{"id":"3347780","url":"https://cloud.skytap.com/configurations/3347780","name":"25670-CXA-999-2","error":""},{"id":"3347772","url":"https://cloud.skytap.com/configurations/3347772","name":"25670-CXA-999-1","error":""},{"id":"3347768","url":"https://cloud.skytap.com/configurations/3347768","name":"18703-CXA-999-2","error":""},{"id":"3347764","url":"https://cloud.skytap.com/configurations/3347764","name":"18703-CXA-999-1","error":""},{"id":"3347292","url":"https://cloud.skytap.com/configurations/3347292","name":"Windows
+        Server \u200b2008 R2 Enterprise SP1 64-bit - Sysprepped","error":""},{"id":"3347192","url":"https://cloud.skytap.com/configurations/3347192","name":"25670-CXA-999-2","error":""},{"id":"3347188","url":"https://cloud.skytap.com/configurations/3347188","name":"25670-CXA-999-1","error":""},{"id":"3347184","url":"https://cloud.skytap.com/configurations/3347184","name":"18703-CXA-999-2","error":""},{"id":"3347180","url":"https://cloud.skytap.com/configurations/3347180","name":"18703-CXA-999-1","error":""},{"id":"3347136","url":"https://cloud.skytap.com/configurations/3347136","name":"25670-CXA-999-2","error":""},{"id":"3347132","url":"https://cloud.skytap.com/configurations/3347132","name":"25670-CXA-999-1","error":""},{"id":"3347128","url":"https://cloud.skytap.com/configurations/3347128","name":"18703-CXA-999-2","error":""},{"id":"3347124","url":"https://cloud.skytap.com/configurations/3347124","name":"18703-CXA-999-1","error":""},{"id":"3346532","url":"https://cloud.skytap.com/configurations/3346532","name":"25670-CXA-999-2","error":""},{"id":"3346528","url":"https://cloud.skytap.com/configurations/3346528","name":"25670-CXA-999-1","error":""},{"id":"3346524","url":"https://cloud.skytap.com/configurations/3346524","name":"18703-CXA-999-2","error":""},{"id":"3346520","url":"https://cloud.skytap.com/configurations/3346520","name":"18703-CXA-999-1","error":""},{"id":"3346516","url":"https://cloud.skytap.com/configurations/3346516","name":"18703-CXA-999-2","error":""},{"id":"3346512","url":"https://cloud.skytap.com/configurations/3346512","name":"18703-CXA-999-1","error":""},{"id":"3331120","url":"https://cloud.skytap.com/configurations/3331120","name":"Citrix
+        SFTP Server","error":""},{"id":"3287576","url":"https://cloud.skytap.com/configurations/3287576","name":"teh
+        vmmmm","error":""},{"id":"3266644","url":"https://cloud.skytap.com/configurations/3266644","name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","error":""}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:35 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350092/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDY5NSwic2Vzc2lvbl9pZCI6IjI2NzA2YzkzYzc3Yjg1ZWQ0NDQzYjg1N2QwYWVlZDFkIiwiX2NzcmZfdG9rZW4iOiJ1NWx6K0p3RVB5UUpPMXdRcnZmV0FiNUgxODhzSlh2SG5vL3MyY0YrTVJ3PSJ9--c498e7286901f07343128358a9e31a3ed3e3cd4f;
+        path=/; secure
+      X-Runtime:
+      - '179'
+      Etag:
+      - W/"a57853f9d7831232b9d70d42211348c4"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589750","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986144-4619590-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986144-4619590-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589750","network_id":"2062564","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3549050"},{"text":"skytap / ChangeMe!","id":"3549052"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:32:12 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350092","publish_set_refs":["https://cloud.skytap.com/configurations/3350092/publish_sets/913174"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:35 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350084/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '172'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDY5Niwic2Vzc2lvbl9pZCI6IjlhMWRlOGRlNmE3ZjYwYmIxMDBjNWIwYTUzMGI3MGNmIiwiX2NzcmZfdG9rZW4iOiJMbHUyYi9ibkk0SW5HMFd3ZXFtYWNYSXFUSS83cG1JMEpBNXFTUW9DQ2Y4PSJ9--0895e218faae4ffb5c8a4f10cc7d41a6232e5bc7;
+        path=/; secure
+      Etag:
+      - W/"bb4cde6d84069df30c5a640189116232"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589746","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986140-4619586-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986140-4619586-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589746","network_id":"2062560","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3549046"},{"text":"skytap / ChangeMe!","id":"3549048"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:32:04 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350084","publish_set_refs":["https://cloud.skytap.com/configurations/3350084/publish_sets/913172"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:36 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350080/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDY5Nywic2Vzc2lvbl9pZCI6IjBhYzgyZTYwM2RkOTgwOWEyMjk4MDE5ZTg3ODg0MGE5IiwiX2NzcmZfdG9rZW4iOiJGUU1JRSsrTm8wekZ0Y3hjKzh3WjYrSFFWcCsrRExtZFRPRkZ5YSszMVJZPSJ9--a08c1639d0c1e29490b3855e8ba8c45d751ba83c;
+        path=/; secure
+      Etag:
+      - W/"359250bacb57d5fe0d84d261dd740a10"
+      X-Runtime:
+      - '218'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589744","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986138-4619584-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986138-4619584-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589744","network_id":"2062558","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3549042"},{"text":"skytap / ChangeMe!","id":"3549044"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:31:56 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350080","publish_set_refs":["https://cloud.skytap.com/configurations/3350080/publish_sets/913170"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:37 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350076/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDY5OCwic2Vzc2lvbl9pZCI6Ijg4ZTFmOTcxMDk2ODc5YTA3M2U5MDM0NzVmZjI3YjQ2IiwiX2NzcmZfdG9rZW4iOiJlS1p0TW0zd0p1a1hCRFhpeXg3ZzN2TUNPUmp6bnJFNkkxeURPdmJDMGVjPSJ9--c6a7cd564f7bd21fa724bf9e7468b930f193cd80;
+        path=/; secure
+      X-Runtime:
+      - '177'
+      Etag:
+      - W/"0e21a335233aea1df98a4abdca83bffe"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589742","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986136-4619582-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986136-4619582-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589742","network_id":"2062556","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3549038"},{"text":"skytap / ChangeMe!","id":"3549040"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:31:48 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350076","publish_set_refs":["https://cloud.skytap.com/configurations/3350076/publish_sets/913168"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:38 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350036/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDY5OCwic2Vzc2lvbl9pZCI6IjYxZTBlNmViMGExZDQzMGZlYzYzYWQ1NjdhODhiMzg3IiwiX2NzcmZfdG9rZW4iOiJIZytaUEU3YVVudmswRkxPbEt6Y3c5ZGZvUDVQeXZlN2dsZ0t5bUtkMzlVPSJ9--76f819959de95dc40f525a9465c7161d469de64b;
+        path=/; secure
+      Etag:
+      - W/"0ff7131fc6c94ded443757b4e9c03134"
+      X-Runtime:
+      - '565'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589702","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986116-4619542-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986116-4619542-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589702","network_id":"2062534","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3549002"},{"text":"skytap / ChangeMe!","id":"3549004"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:23:46 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350036","publish_set_refs":["https://cloud.skytap.com/configurations/3350036/publish_sets/913164"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:39 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350032/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwMCwic2Vzc2lvbl9pZCI6IjFkZTJhZjgzOTA1Y2JlYmU1YTkyM2Y1MTI3MTRkNWE2IiwiX2NzcmZfdG9rZW4iOiJaeTIvRUtZY0FPa3lUNXcrTEpoVFA2UGt4ZWs2NGVsNFhBZWpKMk1QTEpvPSJ9--9b396afd73591230a7f6b9fccc226e1ac82e1df4;
+        path=/; secure
+      X-Runtime:
+      - '223'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"5e64db465d0cd087d9a0518ccc9df3d7"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589700","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986114-4619540-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986114-4619540-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589700","network_id":"2062532","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3548998"},{"text":"skytap / ChangeMe!","id":"3549000"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:23:38 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350032","publish_set_refs":["https://cloud.skytap.com/configurations/3350032/publish_sets/913162"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:40 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350024/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwMSwic2Vzc2lvbl9pZCI6ImY5ZmNkYTk2Nzg2YTJlNGNlNTU4MjY2NGM2NjRlYTI4IiwiX2NzcmZfdG9rZW4iOiI5NDZvcWNyME8rSjJOa0V1TTJaNE85aFdKVGFaUlgrSDZiblMzWlQwb25ZPSJ9--1f558a44082b096fe189c0b110da181728f35fb8;
+        path=/; secure
+      Etag:
+      - W/"5cc0805e02e0326be9131a2ae8d0fb81"
+      X-Runtime:
+      - '177'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589696","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986110-4619536-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986110-4619536-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589696","network_id":"2062528","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3548990"},{"text":"skytap / ChangeMe!","id":"3548992"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:23:30 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350024","publish_set_refs":["https://cloud.skytap.com/configurations/3350024/publish_sets/913160"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:41 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3350016/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"6f7f3b962d09608bda5a9ab7873d9e38"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '869'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwMiwic2Vzc2lvbl9pZCI6IjU2ZjRlOTcyNjM2NDRlYjM3OWZjYmQyNDljNjY0MjNhIiwiX2NzcmZfdG9rZW4iOiJlNVpwWWZZYmdzc1FyVi9WNkF5TERTY1dUUThLU3kwMXd3K1gvQVExRzFrPSJ9--fea1f51c8b6ba5e33d223ca3eb0a1083b36e6cd1;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589692","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986106-4619532-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986106-4619532-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589692","network_id":"2062524","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3548986"},{"text":"skytap / ChangeMe!","id":"3548988"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:23:22 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3350016","publish_set_refs":["https://cloud.skytap.com/configurations/3350016/publish_sets/913158"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:43 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3349932/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '159'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"b221fec9f6f02b32b234f6c1e50fb62b"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwMywic2Vzc2lvbl9pZCI6IjM4YzBmYjI1N2EyZjRlNjM3YTI3MWFjZGFlNGZmZGFkIiwiX2NzcmZfdG9rZW4iOiJhaXlZVzluL1VjdE01a2ZEcGRFVmx3YjA1WXMzWEsrZzV1YUVESHlUL053PSJ9--a68e69f2bb47510c5e82606fc2ad43d36c351918;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589632","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986058-4619464-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986058-4619464-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589632","network_id":"2062480","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3548942"},{"text":"skytap / ChangeMe!","id":"3548944"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:14:52 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3349932","publish_set_refs":["https://cloud.skytap.com/configurations/3349932/publish_sets/913142"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:44 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3349900/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"19338ed6ab5219c4b6e681890b8a9e4b"
+      X-Runtime:
+      - '180'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwNCwic2Vzc2lvbl9pZCI6ImU1N2FjMTk0MjdiYjAyMjYwYTYxN2NjNTI4YmMzNTZiIiwiX2NzcmZfdG9rZW4iOiJKdm1VRkNibmpnQ0o3L3VZdkVSam1CeVFkZHJBZ3paUkxTNzdWKzBnRmkwPSJ9--90b4289c38e3f50983fd698ad16fbae2e0fcdc66;
+        path=/; secure
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4589610","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1986042-4619442-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1986042-4619442-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4589610","network_id":"2062470","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3548926"},{"text":"skytap / ChangeMe!","id":"3548928"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        13:13:09 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3349900","publish_set_refs":["https://cloud.skytap.com/configurations/3349900/publish_sets/913136"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:44 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3348024/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwNSwic2Vzc2lvbl9pZCI6ImQ3YWU5MDE3YmQ3YzBjMDc0ODk1NzE4MDUxMTExMTFiIiwiX2NzcmZfdG9rZW4iOiJtd3dNQXYzSDFkQ3Qvcy9ZS1p1bFpINGtYdlFtQUV6YWtOUkYzYUNONUs0PSJ9--e8f179b8d2de1ce464019448715942153c0f909f;
+        path=/; secure
+      X-Runtime:
+      - '223'
+      Etag:
+      - W/"9a9daa0055956fdbe8683103bb5260e6"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586898","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984974-4616680-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984974-4616680-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586898","network_id":"2061382","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545852"},{"text":"skytap / ChangeMe!","id":"3545854"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:11:48 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3348024","publish_set_refs":["https://cloud.skytap.com/configurations/3348024/publish_sets/912696"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:45 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3348020/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '174'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwNSwic2Vzc2lvbl9pZCI6ImE0NGZiYmI5MTZjNmU3NDkyNjM2MzZkNzM4MDRiZTU2IiwiX2NzcmZfdG9rZW4iOiJ3bUU1anM4RzdKaEUyOUJwYlZTT21QQ0dzTHprNkUvQ1JXdm9ybC9BRGFvPSJ9--9ab25b1573f9e8a9c3a6b62727f70f5aa8d6b879;
+        path=/; secure
+      Etag:
+      - W/"1f0f06f71259e6966da3929ed19404a7"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586896","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984972-4616678-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984972-4616678-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586896","network_id":"2061380","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545848"},{"text":"skytap / ChangeMe!","id":"3545850"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:11:37 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3348020","publish_set_refs":["https://cloud.skytap.com/configurations/3348020/publish_sets/912694"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:46 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3348012/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwNiwic2Vzc2lvbl9pZCI6IjljNDQzYWExMWMwODcxNTAxNTY4Zjg4MGI0ZjYwZTAxIiwiX2NzcmZfdG9rZW4iOiI0ZkNBZ0M2L1Y1cWNyVmNCZVZLVndpRkgrYmxLa3UzQUZSMEpOTElzQjhZPSJ9--f48af0bad4e0e57ff64a3c163ea1bf4567468f9f;
+        path=/; secure
+      Etag:
+      - W/"d536bc01298ef4789be5b101ae98efe7"
+      X-Runtime:
+      - '165'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586892","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984968-4616674-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984968-4616674-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586892","network_id":"2061376","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545842"},{"text":"skytap / ChangeMe!","id":"3545844"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:11:27 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3348012","publish_set_refs":["https://cloud.skytap.com/configurations/3348012/publish_sets/912692"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:47 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3348004/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwNywic2Vzc2lvbl9pZCI6ImNhNjk2M2FhNzk5MmVlNTI5MjIwMDU2ZWE0NWU0ZDcxIiwiX2NzcmZfdG9rZW4iOiJ1aWFmYTR3K0xGWjlZRXZrWFl1TVB3OVFCOTJndmFYVlgvekZrZXNTU29NPSJ9--941b092fddbfb663d1b189ed6219ffd58f787fab;
+        path=/; secure
+      X-Runtime:
+      - '174'
+      Etag:
+      - W/"827e97162e552334d2a58013eb294440"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586888","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984964-4616670-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984964-4616670-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586888","network_id":"2061372","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545834"},{"text":"skytap / ChangeMe!","id":"3545836"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:11:19 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3348004","publish_set_refs":["https://cloud.skytap.com/configurations/3348004/publish_sets/912690"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:47 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347980/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwOCwic2Vzc2lvbl9pZCI6IjMzMGI2YTdmZGJlOWNhZmNjMDQ3NzUwMDE0NzU0YmFlIiwiX2NzcmZfdG9rZW4iOiJMWjA2Q1JYSWlIMEdZNnNZcGtxc1VVaW40MjZ1dFgya044empSUnBSQXhRPSJ9--6ef29c855f6cd0ed61b5e2d4324104f68cfa82ab;
+        path=/; secure
+      X-Runtime:
+      - '166'
+      Etag:
+      - W/"b0e19c78ae5fa002000a363d2dfd6417"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586862","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984950-4616644-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984950-4616644-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586862","network_id":"2061356","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545806"},{"text":"skytap / ChangeMe!","id":"3545808"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:09:38 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347980","publish_set_refs":["https://cloud.skytap.com/configurations/3347980/publish_sets/912686"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:48 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347976/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '171'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwOCwic2Vzc2lvbl9pZCI6ImVjZGQ5YWU2OGMyOWZlNzBhNDc3MDZhMDBmZWVlNjIxIiwiX2NzcmZfdG9rZW4iOiIvc3B0Q0hmODQwSWJ2ZThXOWRlR3BjRlJ0eUxQS0V3RktxbjZBQ1NkOHNnPSJ9--68891088a2a9316f5faa7c0af2cdaf01d375cea1;
+        path=/; secure
+      Etag:
+      - W/"9fec471ee2d0df2dd9cfac587e8dda23"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586858","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984948-4616642-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984948-4616642-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586858","network_id":"2061354","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545802"},{"text":"skytap / ChangeMe!","id":"3545804"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:09:31 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347976","publish_set_refs":["https://cloud.skytap.com/configurations/3347976/publish_sets/912684"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:49 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347972/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '158'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"b14db5841681ccd3d51775e5f1e3202c"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcwOSwic2Vzc2lvbl9pZCI6ImIxN2MyNjVmNWM2ZTk0ZmEyZDkwYjU5MTMyZDJlYTMxIiwiX2NzcmZfdG9rZW4iOiJHRmpBelBSOGMrYktmM2N0dkFZemk1NThhckFvRTdDVFpIekJhOE1WUWIwPSJ9--054600996d11477ce51f898aff869c8cab3ce3a3;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586850","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984946-4616634-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984946-4616634-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586850","network_id":"2061352","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545798"},{"text":"skytap / ChangeMe!","id":"3545800"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:09:20 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347972","publish_set_refs":["https://cloud.skytap.com/configurations/3347972/publish_sets/912682"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:50 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347968/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"b59e6d665f5584e655e61fda5ed3e6b7"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxMCwic2Vzc2lvbl9pZCI6IjEzNGNlNGQwYWVkZjUwMDYxNmRiNmE3N2M0ODRlYWVlIiwiX2NzcmZfdG9rZW4iOiJWNzdEZjlGeXNiWlE4N2x4RUkyWlF3RHJOYlc5K3dJd2NSbnlqOElpWHNJPSJ9--5d02c14418cc5c33a4f13485462f8ba1b1d82904;
+        path=/; secure
+      X-Runtime:
+      - '216'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586834","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984944-4616630-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984944-4616630-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586834","network_id":"2061348","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545772"},{"text":"skytap / ChangeMe!","id":"3545774"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:09:13 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347968","publish_set_refs":["https://cloud.skytap.com/configurations/3347968/publish_sets/912678"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:50 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347900/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '161'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxMSwic2Vzc2lvbl9pZCI6IjA0NjAxZTgzYTUzYWNiNDc1YzJjNDIyZDQyZWU5YzQ1IiwiX2NzcmZfdG9rZW4iOiJQRUVBWmNLNmw4S2VkZ1ZQVVd1djJMT2FLNWswVWE5dEYzQ1JFS2IxUDNnPSJ9--828711b41c284844c3a1c07aea8f0eb132d72f49;
+        path=/; secure
+      Etag:
+      - W/"c483341ea45e4de41bbe0a76fcab3f27"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586752","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984910-4616534-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984910-4616534-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586752","network_id":"2061310","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545718"},{"text":"skytap / ChangeMe!","id":"3545720"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:01:10 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347900","publish_set_refs":["https://cloud.skytap.com/configurations/3347900/publish_sets/912668"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:51 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347892/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '332'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxMiwic2Vzc2lvbl9pZCI6IjdlYjUwODhjYzYxYzRkZTBmZDcwYTdjMTQ5NGVjNDU4IiwiX2NzcmZfdG9rZW4iOiJZcEV2K1VJNm5MQll0RzQwU2NyNkhFZnF6Ry9zcHZ1Um9SRjRnRlo2cGdBPSJ9--32dc80e6f913261fec406cb46c1cf1ed5e3dba46;
+        path=/; secure
+      Etag:
+      - W/"58d3bf0b1bacea6086cfaf59c2ab997f"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586714","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984906-4616512-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984906-4616512-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586714","network_id":"2061304","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545714"},{"text":"skytap / ChangeMe!","id":"3545716"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:01:02 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347892","publish_set_refs":["https://cloud.skytap.com/configurations/3347892/publish_sets/912632"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:52 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347888/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '369'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"2afe0d09690df2a7d9028c5886c7dbcd"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxMywic2Vzc2lvbl9pZCI6IjU5MDc0NjljMWZlNTRiZDlmNTdjOTFlMmE1OTE1MTc4IiwiX2NzcmZfdG9rZW4iOiJGVUtkQkdjWnBCakhoQXlVMjNsck1XemN6U1lLUjlBaUxMRzlEdEYvOG1nPSJ9--f90720fad5cc87bb1d7ce9814dd34cef8ad2a63d;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586696","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984902-4616490-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984902-4616490-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586696","network_id":"2061296","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545690"},{"text":"skytap / ChangeMe!","id":"3545692"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:00:52 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347888","publish_set_refs":["https://cloud.skytap.com/configurations/3347888/publish_sets/912630"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:53 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347880/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxNCwic2Vzc2lvbl9pZCI6IjJhN2VmMTQxNzgxMTU0Nzc5MTUwMTI0ODMyYzBhNjdiIiwiX2NzcmZfdG9rZW4iOiJ5aE5LbE9hVTVkVHZiR1lBUW5RMExyK1RhNlJPWmg1TzNxYzUySGhFT3dzPSJ9--2d53cf204d3e761cadd59ed720ad3ea0cde3c65d;
+        path=/; secure
+      Etag:
+      - W/"75be639bcdbae5f3d3118030df1f370a"
+      X-Runtime:
+      - '177'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586694","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984898-4616476-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984898-4616476-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586694","network_id":"2061294","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545686"},{"text":"skytap / ChangeMe!","id":"3545688"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        10:00:45 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347880","publish_set_refs":["https://cloud.skytap.com/configurations/3347880/publish_sets/912628"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:54 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347876/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"0b1a3922a79a4c2e73727dd88519c5d8"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxNCwic2Vzc2lvbl9pZCI6ImJmYWI3MjY5OWUxODA2YTQ0MGViMGEyZWI0MjY2ODdjIiwiX2NzcmZfdG9rZW4iOiJzbXNreWEvRkV5cnhnWTlJa1p5aTFpaE9jYUxSNUM0UVpSU0NLNDgzejlnPSJ9--753084ffef6d048a526376d051166e6b10a7854c;
+        path=/; secure
+      X-Runtime:
+      - '515'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586688","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984896-4616470-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984896-4616470-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586688","network_id":"2061292","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545682"},{"text":"skytap / ChangeMe!","id":"3545684"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:59:53 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347876","publish_set_refs":["https://cloud.skytap.com/configurations/3347876/publish_sets/912626"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:55 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347872/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '170'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxNywic2Vzc2lvbl9pZCI6IjExYjk5ZTRiNTU4OTBmNzQzMTA2YTBkNDNhMGVjZjg2IiwiX2NzcmZfdG9rZW4iOiJQemNuZ3YwdVZTd3hya0w0d3NjZHVkWkorb3k4cE1sSWlBR3oraFNHazNRPSJ9--30b83d55a006796115a3962693c649ad29db782c;
+        path=/; secure
+      Etag:
+      - W/"476052c861cdb7322f32134bae1c95f7"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586684","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984894-4616466-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984894-4616466-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586684","network_id":"2061290","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545678"},{"text":"skytap / ChangeMe!","id":"3545680"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:59:46 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347872","publish_set_refs":["https://cloud.skytap.com/configurations/3347872/publish_sets/912624"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:57 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347864/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:11:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"fbd7fd7d1abc342edbb1dc890d981e3c"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '723'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxOCwic2Vzc2lvbl9pZCI6ImIwMjQ1ZmRkNGYyYzYwMjZlOTBlMDhhMzMyOTA4ZDcwIiwiX2NzcmZfdG9rZW4iOiJ3ZWlkSFZTR0swekFEUzRvVUxpR1VXeVFEQ0o2N3lNYllHOU9aMkxkM3JRPSJ9--f4723196a3440200475392c56b8f6a72e2976bd7;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586678","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984890-4616460-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984890-4616460-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586678","network_id":"2061286","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545674"},{"text":"skytap / ChangeMe!","id":"3545676"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:59:37 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347864","publish_set_refs":["https://cloud.skytap.com/configurations/3347864/publish_sets/912622"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:11:59 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347860/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"76806e5335c99fce1da877322ac663ef"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '231'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcxOSwic2Vzc2lvbl9pZCI6IjlmMThiMTVjYWFjMGZmZjA2NzE0ZGUwNzExNTUzMTcwIiwiX2NzcmZfdG9rZW4iOiJUaEt5THY5bElaeFhVaVkvVDl4V1dxejAzSlliL21jK0ZPeEN5YjdyZkYwPSJ9--eb4f1be48e433dd5aa836194046675236d9d9075;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586676","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984888-4616458-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984888-4616458-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586676","network_id":"2061284","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545670"},{"text":"skytap / ChangeMe!","id":"3545672"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:59:29 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347860","publish_set_refs":["https://cloud.skytap.com/configurations/3347860/publish_sets/912620"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:00 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347804/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"7933c69e857231b4105b796039016d52"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyMCwic2Vzc2lvbl9pZCI6ImU3Njg0Nzk3NzY0NDFhMzI1MmE5ODE0ZTA4NDlhNzUwIiwiX2NzcmZfdG9rZW4iOiJSSmxGL0s1NW9OQ1dod0lvTElRRjd1V3U2MGhvK25LbnpoUEEvTWszalhRPSJ9--98c08096d0d6446c200a296008a9596a589f045f;
+        path=/; secure
+      X-Runtime:
+      - '369'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586624","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984862-4616406-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984862-4616406-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586624","network_id":"2061258","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545620"},{"text":"skytap / ChangeMe!","id":"3545622"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:50:56 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347804","publish_set_refs":["https://cloud.skytap.com/configurations/3347804/publish_sets/912614"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:01 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347792/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"ad1a9f46b7e42a6a101d6f54f83226f8"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyMSwic2Vzc2lvbl9pZCI6ImY1YjEwNTk0ZmRmNDdkNGUwMzIxNDRkYTk2YTMyNDdiIiwiX2NzcmZfdG9rZW4iOiJCaktSa1BiNk82ZWFxZTU0Um92WWpnSkhHN3NzdFh5ZDUvbFhuQkRwMEgwPSJ9--fae7dfddfd6d1a2b082e190904550ccb403c4e5f;
+        path=/; secure
+      X-Runtime:
+      - '213'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586614","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984854-4616396-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984854-4616396-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586614","network_id":"2061246","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545608"},{"text":"skytap / ChangeMe!","id":"3545610"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:50:47 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347792","publish_set_refs":["https://cloud.skytap.com/configurations/3347792/publish_sets/912610"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:02 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347788/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyMiwic2Vzc2lvbl9pZCI6IjBiMzk4MDk5YjQ3ZWQ1Njc4NzQwNDY2ZWIxMDdhYTgwIiwiX2NzcmZfdG9rZW4iOiJTZW5xVEU0bDJPTmNiZmhnalFLeCt0aDdCaU4vU0gxb2VyOWV2bjBsem9FPSJ9--15ae67b65c20f3650004bd9b687484b5e98843fa;
+        path=/; secure
+      Etag:
+      - W/"7b10b1a5724c34b9cc01bb82e79adaea"
+      X-Runtime:
+      - '275'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586612","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984852-4616394-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984852-4616394-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586612","network_id":"2061244","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545604"},{"text":"skytap / ChangeMe!","id":"3545606"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:50:40 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347788","publish_set_refs":["https://cloud.skytap.com/configurations/3347788/publish_sets/912608"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:03 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347784/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"1039b6dbcbe8a11f0389e823793481e8"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '1222'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyMywic2Vzc2lvbl9pZCI6Ijk0NzJjMzE2ZTAwNDFkMDZmYmJjZDg3NDY1NmQ2ZTY2IiwiX2NzcmZfdG9rZW4iOiJGZzFLZW9nUmtXRWtoSTNveE5qOXdtTUdRSVBVZWt6aDM2YUZGTFdHTHU0PSJ9--bc0127f55e2cc46b4a9e99f42356df0296f58866;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586610","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984850-4616392-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984850-4616392-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586610","network_id":"2061242","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545600"},{"text":"skytap / ChangeMe!","id":"3545602"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:50:32 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347784","publish_set_refs":["https://cloud.skytap.com/configurations/3347784/publish_sets/912606"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:05 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347780/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyNSwic2Vzc2lvbl9pZCI6IjQzZGFmNTdjN2YyNmIzYmEwMGYzYTkzYjk4MTUzMjZhIiwiX2NzcmZfdG9rZW4iOiJ1cW5QamplbnVTK1Zya0RvK2cwZGlrS0xFNjhQR3I0aWgzVThmUmQ3cnlZPSJ9--4c9fc34cb83ce02a08f02a787b771c38109be1cd;
+        path=/; secure
+      X-Runtime:
+      - '378'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"aeaeea3ae91e4dd34e20c506b32ae2ac"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586606","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984846-4616388-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984846-4616388-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586606","network_id":"2061238","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545596"},{"text":"skytap / ChangeMe!","id":"3545598"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:50:00 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347780","publish_set_refs":["https://cloud.skytap.com/configurations/3347780/publish_sets/912604"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:06 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347772/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '496'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"5533431276b55e455d08959fa90b3d25"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyNiwic2Vzc2lvbl9pZCI6ImU2ZjQ0ZTc3MmYxNDY1NjE2YzU5Y2U3MTAyY2M3NTUwIiwiX2NzcmZfdG9rZW4iOiJqcUxaTXFBck1oZ3RxVnpUMnVNdXUvWWE0MDJjRVVEcTRJZWpkb3F4Mk1jPSJ9--df612f7315af02f90030d7f5ee819ed1abe3f8ff;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586604","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984844-4616386-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984844-4616386-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586604","network_id":"2061236","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545592"},{"text":"skytap / ChangeMe!","id":"3545594"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:49:53 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347772","publish_set_refs":["https://cloud.skytap.com/configurations/3347772/publish_sets/912602"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:07 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347768/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '346'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"24adff92290df4b31d99ff46ddafb3b6"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyNywic2Vzc2lvbl9pZCI6IjExMzRkNWY5YzY4MmNiZDg5MWJmMWY2M2QzZDM0ZTE0IiwiX2NzcmZfdG9rZW4iOiJHU0xmeGVJdGhtMzNHUEZFSU93MStuYUt5amFZM3FSaldRbmk2VG9EdGR3PSJ9--01e302c0650ca9003dfa3d8da1269dc660dfc5bb;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586602","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984842-4616384-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984842-4616384-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586602","network_id":"2061234","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545588"},{"text":"skytap / ChangeMe!","id":"3545590"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:49:42 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347768","publish_set_refs":["https://cloud.skytap.com/configurations/3347768/publish_sets/912600"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:08 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347764/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"cc967d2fe170bf1429f8d732f14a8df7"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDcyOCwic2Vzc2lvbl9pZCI6IjE4NGY2YTQ2ZDc5ZDU3OThkYmUyZjVjZTg4NWRhOGViIiwiX2NzcmZfdG9rZW4iOiJwQ24wcTFlZ3RmcCt4aTFnQ2JVb0wzVzdGQ2t6ZzVscllWTjQwM1BxdGZrPSJ9--2f4042611c926c57a50ed4f999b3e4cd65608b56;
+        path=/; secure
+      X-Runtime:
+      - '268'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4586600","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984840-4616382-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984840-4616382-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4586600","network_id":"2061232","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545584"},{"text":"skytap / ChangeMe!","id":"3545586"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        09:49:34 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347764","publish_set_refs":["https://cloud.skytap.com/configurations/3347764/publish_sets/912598"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:09 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347292/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '417'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"235ed9b3986b951a9eba01aa194af2b4"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczMCwic2Vzc2lvbl9pZCI6ImUwNWZiYjBiODI1N2U0MjE3M2QxZDkzODVlY2RmNWRkIiwiX2NzcmZfdG9rZW4iOiJ2YU80VWVTOHkvd2MrdHhTQzhialgzRFdUTUo1bnNuQUpodE5hSnB1ZUVrPSJ9--496dae20b1d8c4d20cee71620b62e3685d8cbb61;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585764","name":"Windows Server \u200b2008 R2 Enterprise SP1
+        64-bit - Sysprepped","runstate":"running","hardware":{"cpus":1,"ram":1024,"svms":1,"guestOS":"windows7srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984534-4615556-scsi-0-0","size":20480,"type":"SCSI","controller":"0","lun":"0"}],"storage":20480,"upgradable":true,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984534-4615556-0","ip":"10.0.0.1","hostname":"win2k8r2ent","mac":"00:50:56:2d:af:af","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Windows
+        Server \u200b2008 R2 Enterprise SP1 64-bit - Sysprepped","status":"Running","vm_id":"4585764","network_id":"2060928","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Network
+        1","nic_type":"e1000","promiscuous":false}],"notes":[],"labels":[],"credentials":[],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:36:19 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347292"}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:10 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347192/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"e150f9f91f7464f4ddb747c025987bf4"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '1307'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczMSwic2Vzc2lvbl9pZCI6ImY3NWUyNDU4NTE2OThkM2IwNjU0MmUwYmU0MDg0YjZkIiwiX2NzcmZfdG9rZW4iOiJxMFdzN2dLY0c4VTVNZzBMSDlwK0xMZFhOZkVWMUtvNzRQVmkxVkVpRUpZPSJ9--3dce7d9f1acf226f7aa5f781cbe8d72e23a1d028;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585630","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"running","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984460-4615420-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984460-4615420-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Running","vm_id":"4585630","network_id":"2060864","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545072"},{"text":"skytap / ChangeMe!","id":"3545074"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:18:18 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347192","publish_set_refs":["https://cloud.skytap.com/configurations/3347192/publish_sets/912420"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:13 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347188/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '408'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczMywic2Vzc2lvbl9pZCI6IjYzZGQxY2Q4ZTZiNmRmMzJjZDIyOGE2Zjg1OTg2MzUyIiwiX2NzcmZfdG9rZW4iOiI5bDBVVWlxV01aVndHSHoveFAwT2xXaHBJRXVDd3Q5dndaTkxpV2o4OWUwPSJ9--a8fc550102573f0b73439c6531641a5d2ecc462c;
+        path=/; secure
+      Etag:
+      - W/"9ffa6fff445165a54358b26c0a099a47"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585626","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984456-4615416-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984456-4615416-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4585626","network_id":"2060858","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545068"},{"text":"skytap / ChangeMe!","id":"3545070"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:18:09 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347188","publish_set_refs":["https://cloud.skytap.com/configurations/3347188/publish_sets/912418"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:14 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347184/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczNCwic2Vzc2lvbl9pZCI6ImY4ZDhjNWQyNzNlYzc3NTZmYzM4NDk0NjYyNzQyZWJhIiwiX2NzcmZfdG9rZW4iOiIzOWIxbkY5MmRGWVFmdTIyYXV6cjFWUUo1QnpHTWhybGNuNmwrRnJIditrPSJ9--e3f7c25329fc1a39a9219fe87fc64c295b2f2a6a;
+        path=/; secure
+      Etag:
+      - W/"7a809374f1f38152286b17b9751d06d0"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '652'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585624","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984454-4615414-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984454-4615414-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4585624","network_id":"2060856","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545064"},{"text":"skytap / ChangeMe!","id":"3545066"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:17:59 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347184","publish_set_refs":["https://cloud.skytap.com/configurations/3347184/publish_sets/912416"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:15 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347180/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczNSwic2Vzc2lvbl9pZCI6IjdjZmNmZTA1N2E2OGI0NDcyNDJiODNhZjcxYzFhYTBkIiwiX2NzcmZfdG9rZW4iOiJoaXVsM3M2Zk9HYkFzZG9XL3oxaUNteUp2bXZNY1JOaEg0a2N6Y3pmMVdZPSJ9--ed9dc1c9d63083a17b7dde68a6b5864f2a45a013;
+        path=/; secure
+      Etag:
+      - W/"5a4c641343f0cda3cd989afac3219558"
+      X-Runtime:
+      - '404'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585622","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984452-4615412-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984452-4615412-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4585622","network_id":"2060854","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545060"},{"text":"skytap / ChangeMe!","id":"3545062"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:17:52 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347180","publish_set_refs":["https://cloud.skytap.com/configurations/3347180/publish_sets/912414"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:16 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347136/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"40147604127eeb739e41f3e831bcc1fe"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczNiwic2Vzc2lvbl9pZCI6ImZlZTY2YWMyOWI1MmI2NGJlNGY2OWM0MmUzNjZjYWNhIiwiX2NzcmZfdG9rZW4iOiJhZXFHdlNpZFpPdHdpeFJxd2VFdTVsYTN4REd3MWNSUmJINkl0cGU0NFdBPSJ9--91b6d6b24bd4f81e07da73cd394f41d34089aa84;
+        path=/; secure
+      X-Runtime:
+      - '367'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585586","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984420-4615368-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984420-4615368-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4585586","network_id":"2060832","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545038"},{"text":"skytap / ChangeMe!","id":"3545040"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:12:05 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347136","publish_set_refs":["https://cloud.skytap.com/configurations/3347136/publish_sets/912400"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:17 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347132/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Etag:
+      - W/"237ec35116e1c31d56c3560c956493ce"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczOCwic2Vzc2lvbl9pZCI6IjkwNDE0ZGI3ZjY0Nzc1ZTZkMDYwOWY3MmE1ZWUwNzdjIiwiX2NzcmZfdG9rZW4iOiJlV3YvN0g5UVBvRTRzaDQ4OEswWlhWbnV0QThQank5aVA5R0RwWC95WWtjPSJ9--eeb70187e76f4525d9623c41260e0f064b90a408;
+        path=/; secure
+      X-Runtime:
+      - '322'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585584","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984418-4615366-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984418-4615366-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4585584","network_id":"2060830","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545034"},{"text":"skytap / ChangeMe!","id":"3545036"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:11:58 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347132","publish_set_refs":["https://cloud.skytap.com/configurations/3347132/publish_sets/912398"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:18 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347128/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '482'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDczOCwic2Vzc2lvbl9pZCI6IjQ5N2RjMjg4OTM3YmRkYWM4YjRjOWM5YTk0ZDZlMmI5IiwiX2NzcmZfdG9rZW4iOiJCRzZ4cHkvUkpsdWY2QVgrcElQMzRPbTdpTFBPVGFoamc2STg3bWdLb1FFPSJ9--ce4ef9a07258119d0d35fd0ee628f531e2911d86;
+        path=/; secure
+      Etag:
+      - W/"11ed594d7da5bfab906a50dfda98f45f"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585582","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984416-4615364-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984416-4615364-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4585582","network_id":"2060828","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545030"},{"text":"skytap / ChangeMe!","id":"3545032"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:11:50 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347128","publish_set_refs":["https://cloud.skytap.com/configurations/3347128/publish_sets/912396"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:19 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3347124/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      X-Runtime:
+      - '360'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0MCwic2Vzc2lvbl9pZCI6ImJhNWViMTg5OTQyNTE0OTQ5ZGY4NTllMjM5Mjc4NzZkIiwiX2NzcmZfdG9rZW4iOiJaTVYyK3FNYXU5ODVjRmx2dUJaeFpLRHRuaTRMeWhpMVBQT0pXa0UvRStrPSJ9--4f839f308572506616171c7f6e49fce50b7f080e;
+        path=/; secure
+      Etag:
+      - W/"0e06856388542a5f80b5d320f81d523b"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4585580","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984414-4615362-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984414-4615362-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4585580","network_id":"2060826","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3545026"},{"text":"skytap / ChangeMe!","id":"3545028"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        08:11:41 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3347124","publish_set_refs":["https://cloud.skytap.com/configurations/3347124/publish_sets/912394"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:21 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3346532/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '358'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"ee52c262631b3612e0b9ea06e5f238bd"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0MSwic2Vzc2lvbl9pZCI6ImRkOTJlZjA4YTNkNDVhNjEyNWQzNDk5NDM3MzlmMDE0IiwiX2NzcmZfdG9rZW4iOiIrK0tiL25aRXNDOGVhdGNaTUMzV2c2dnhyazRaRkFMTldreGgrcW1QazBNPSJ9--53d3bf21b16f1f56a1169a653bcc9fc682b2088a;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4584598","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984056-4614372-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984056-4614372-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4584598","network_id":"2060460","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3544270"},{"text":"skytap / ChangeMe!","id":"3544272"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        06:48:41 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3346532","publish_set_refs":["https://cloud.skytap.com/configurations/3346532/publish_sets/912128"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:22 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3346528/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '282'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"a1e0d751e5684696034b733e6e248383"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0Miwic2Vzc2lvbl9pZCI6ImRmOGQ5MjVkNTJkZmQwYjU3NDFkNWYzZDY4YjE0OWNjIiwiX2NzcmZfdG9rZW4iOiJiOTFiWlRwYW9nK1QxTjZhRm0ybHBJVndtMzF1UnRvSHJOdmFaTmIzVFJZPSJ9--be7f8047563859fb97dba7b164a13b11784f3b9b;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4584596","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984054-4614370-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984054-4614370-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4584596","network_id":"2060458","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3544266"},{"text":"skytap / ChangeMe!","id":"3544268"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        06:48:33 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3346528","publish_set_refs":["https://cloud.skytap.com/configurations/3346528/publish_sets/912126"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:22 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3346524/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0Mywic2Vzc2lvbl9pZCI6IjcxOGEzOTczYTc1MDQ1NTRhYzk5MGU0OWVhYTlmYTJiIiwiX2NzcmZfdG9rZW4iOiJKVGpjMDIvL1VRMW1xOG1rRU5mdXg2U3J3bk5uNTE3Z1lCRFpWbGNUdWtFPSJ9--9fa31d33760a7c4c7d546608ad589430b9fc06c8;
+        path=/; secure
+      Etag:
+      - W/"b52a4077baff237fe1843284dc0c8266"
+      X-Runtime:
+      - '316'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4584594","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984052-4614368-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984052-4614368-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4584594","network_id":"2060456","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3544262"},{"text":"skytap / ChangeMe!","id":"3544264"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        06:48:24 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3346524","publish_set_refs":["https://cloud.skytap.com/configurations/3346524/publish_sets/912124"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:23 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3346520/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"791960d5d2441bdf77cf8bc0d71bfa6d"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0NCwic2Vzc2lvbl9pZCI6ImJkYzEyOTdkMDNmYzMzMzhiOGZhZGIxYjhiNWUwOGE3IiwiX2NzcmZfdG9rZW4iOiJKaWZFRWVtM0h3MjRjQi9hNGpyUkQxRzFNYzRNYmNVRGhkbG9WdG1aYkxJPSJ9--fbd026657aee01d1404347b0c98ff3cf006d2a56;
+        path=/; secure
+      X-Runtime:
+      - '263'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4584590","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984050-4614364-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984050-4614364-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4584590","network_id":"2060454","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3544258"},{"text":"skytap / ChangeMe!","id":"3544260"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        06:48:17 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3346520","publish_set_refs":["https://cloud.skytap.com/configurations/3346520/publish_sets/912120"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:24 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3346516/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0NSwic2Vzc2lvbl9pZCI6Ijk4NGJiYWZlYzA3ODQwYjM2MjMxOTFlNzBhMGIyYTEzIiwiX2NzcmZfdG9rZW4iOiJvazk4U1lJVHlkeXR3VVlTQnhBcGhnbXFmYXR5anJkekNYWlpXRUN0MVpJPSJ9--e5e603ea665b213dcf8916592be4ce290d13cff1;
+        path=/; secure
+      X-Runtime:
+      - '316'
+      Etag:
+      - W/"3923b068317ab432ed2a369d1dc86058"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4584588","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984048-4614362-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984048-4614362-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4584588","network_id":"2060452","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3544254"},{"text":"skytap / ChangeMe!","id":"3544256"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        06:47:40 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3346516","publish_set_refs":["https://cloud.skytap.com/configurations/3346516/publish_sets/912118"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:26 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3346512/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '210'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"290eec657fbd190b66602db5aa0ed7b3"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0Niwic2Vzc2lvbl9pZCI6IjA3ZWU0YWM5MGY4OThjZTkyMGIyNDJjYmZkOTA0NDY1IiwiX2NzcmZfdG9rZW4iOiJGSER0L3RpU2daNnVlUFBDMXU2KzY0cFRmNTd3eGVkR0VVY0tRc0tIRWVzPSJ9--dd9770f10a1bde0fa803c5d0ca542a824bf4df68;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4584586","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"stopped","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1984044-4614360-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1984044-4614360-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":0,"services":[],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Powered
+        off","vm_id":"4584586","network_id":"2060450","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3544250"},{"text":"skytap / ChangeMe!","id":"3544252"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/10
+        06:47:30 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3346512","publish_set_refs":["https://cloud.skytap.com/configurations/3346512/publish_sets/912116"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:26 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3331120/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '175'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"f8ca6463bdc10c2a69593506a96a37e8"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0Nywic2Vzc2lvbl9pZCI6IjY5YzU3NDcyODRjMjkwODNjNTI1ODVmZWZmNjc1YWI2IiwiX2NzcmZfdG9rZW4iOiJMYmJ3bWJmUmNsODZVbjJkZDhEeWRnUmhYd1U3QU84cmZGblNJR1hVbDVZPSJ9--f567a831c024b6c3ee5b2a34a2a6ac4c01202c05;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4568858","name":"Ubuntu Server 14.04 - 64-bit","runstate":"running","hardware":{"cpus":1,"ram":1024,"svms":1,"guestOS":"ubuntu-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1975930-4598324-scsi-0-0","size":20480,"type":"SCSI","controller":"0","lun":"0"}],"storage":20480,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1975930-4598324-0","ip":"10.0.0.1","hostname":"host-1","mac":"00:50:56:14:34:E4","services_count":1,"services":[{"internal_port":22,"external_port":8309,"external_ip":"services-emea.skytap.com","id":"22"}],"public_ips_count":0,"public_ips":[],"vm_name":"Ubuntu
+        Server 14.04 - 64-bit","status":"Running","vm_id":"4568858","network_id":"2051770","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"cc_skytap
+        / jShwb2h!@u2eL7","id":"3530936"},{"text":"root / sjs@jkwIj1dSj8$aa","id":"3530968"},{"text":"cc_citrix
+        / kSj!h3Ks9jCf*2aa","id":"3530970"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/08
+        08:32:53 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3331120"}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:27 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3287576/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '408'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"acafa3b812af1b5d8717c70691d46d12"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0Nywic2Vzc2lvbl9pZCI6IjIxYzcwMTg0NGVlZmUwMjZmZTRmNzhiOGIyNzc4MWMyIiwiX2NzcmZfdG9rZW4iOiJvU2FiTGNDZlFlQnJtN1BFQnNRZG53RUppOTcvZGlMSVU0aU0rb3VKNzdjPSJ9--5ecf508d3afe0fc9cd752992a14ed258b74168f2;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4524114","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"suspended","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1953322-4552442-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1953322-4552442-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":1,"services":[{"internal_port":8789,"external_port":8492,"external_ip":"services-emea.skytap.com","id":"8789"}],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Suspended","vm_id":"4524114","network_id":"2026452","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3491026"},{"text":"skytap / ChangeMe!","id":"3491028"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/03
+        05:57:26 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3287576","publish_set_refs":["https://cloud.skytap.com/configurations/3287576/publish_sets/903650"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:28 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3266644/vms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc0OSwic2Vzc2lvbl9pZCI6ImMxNGI2ZGFjZTY5OGE4MmFlYzUwYWQwMTk4Yzc2YWFmIiwiX2NzcmZfdG9rZW4iOiJZaGxUeGFHWjV5ZEY5YkdENDE2cGZBZjU5SHJCMVdOWmNPZjBQY0hWWi9RPSJ9--05149b59583d729edb898677855809c551cffda6;
+        path=/; secure
+      Etag:
+      - W/"899165e0d49488bcf176b249f4114d11"
+      X-Runtime:
+      - '417'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"4501044","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"running","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1941952-4521472-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1941952-4521472-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":1,"services":[{"external_ip":"services-emea.skytap.com","internal_port":8789,"external_port":8932,"id":"8789"}],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Running","vm_id":"4501044","network_id":"2016316","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3477614"},{"text":"skytap / ChangeMe!","id":"3477616"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/01/29
+        18:43:32 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3266644","publish_set_refs":["https://cloud.skytap.com/configurations/3266644/publish_sets/903098"]}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:30 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/projects
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '200'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Etag:
+      - '"c939c4a420f0056472bf8afdd62a5a91"'
+      X-Runtime:
+      - '25'
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc1MCwic2Vzc2lvbl9pZCI6IjM5ZjM4MjhmN2Q2N2QzZWYyNDgzOWQ2YzMyOTEzYjIzIiwiX2NzcmZfdG9rZW4iOiJ6eHNWamRvVExZalVGWlNhejlaZ2tuWUs4VGtCb2hXMzZjeVRwUFpPb2xvPSJ9--23178b972943ba7e673a1c6a0244868e97876fc3;
+        path=/; secure
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '[{"id":"36422","url":"https://cloud.skytap.com/projects/36422","name":"Windows
+        Server 2012 Standard - Sysprepped - 2015/2/5 8:00","summary":null,"show_project_members":true,"auto_add_role_name":null}]'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:30 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/projects/36422/configurations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc1MCwic2Vzc2lvbl9pZCI6IjJkMzQxZGFiMzAyYzUxMjU1NmFmOGU1OWNkMGZhNTcxIiwiX2NzcmZfdG9rZW4iOiJQKzF2SkJoYVBCNGR5TmxVdytlTkIrdkZRZ0dQWkJKRDFWczdQWnpSZ2pVPSJ9--15e4026e25af295679e649a1994cc0f8e0d6ba4e;
+        path=/; secure
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      X-Runtime:
+      - '26'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:31 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3287576/vms/4524114?configuration_url=https://cloud.skytap.com/configurations/3287576
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc1MSwic2Vzc2lvbl9pZCI6ImVjYzYzOWQyODMwYWQxYzk2NTk1OTg3MzNjODdhZTZlIiwiX2NzcmZfdG9rZW4iOiJUdzJBZGJVc1hZcGVES0tkT041c3VaSnlFU0s3elBOYmxtTDVFMzN2UEFrPSJ9--7405de61a7efbb94c156927c9c1ce1348d00ae39;
+        path=/; secure
+      Etag:
+      - W/"03e1ee9b86895eaef10bde9cce446732"
+      X-Runtime:
+      - '260'
+    body:
+      encoding: UTF-8
+      string: '{"id":"4524114","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"suspended","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1953322-4552442-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1953322-4552442-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":1,"services":[{"external_ip":"services-emea.skytap.com","internal_port":8789,"external_port":8492,"id":"8789"}],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Suspended","vm_id":"4524114","network_id":"2026452","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3491026"},{"text":"skytap / ChangeMe!","id":"3491028"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/03
+        05:57:26 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3287576","publish_set_refs":["https://cloud.skytap.com/configurations/3287576/publish_sets/903650"]}'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:32 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3287576/vms/4524114?configuration_url=https://cloud.skytap.com/configurations/3287576
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Runtime:
+      - '367'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - W/"b0d0c8ae91c6e6aad437e828d6257c06"
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDc1Miwic2Vzc2lvbl9pZCI6ImU4MTgwNTgzNjE1ZDVmYmZjOWQyMDYxYzk4ODdlNDk2IiwiX2NzcmZfdG9rZW4iOiIzbUx6b093SWUzVld3WnhQdUNUU04vcEFkTXQxblAvZ3Fwd1hwN1d0VkI0PSJ9--02235ed66ad3983ead8df563bd25ea6769c8aea3;
+        path=/; secure
+    body:
+      encoding: UTF-8
+      string: '{"id":"4524114","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"suspended","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1953322-4552442-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1953322-4552442-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":1,"services":[{"internal_port":8789,"external_port":8492,"external_ip":"services-emea.skytap.com","id":"8789"}],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Suspended","vm_id":"4524114","network_id":"2026452","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3491026"},{"text":"skytap / ChangeMe!","id":"3491028"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/03
+        05:57:26 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3287576","publish_set_refs":["https://cloud.skytap.com/configurations/3287576/publish_sets/903650"]}'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:33 GMT
+- request:
+    method: put
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3287576/vms/4524114
+    body:
+      encoding: UTF-8
+      string: runstate=running
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:12:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwic3NvX2xvZ2luX3JlZGlyZWN0X3BhcmFtcyI6bnVsbCwidGltZSI6MTQyMzYyMDc1Mywic2Vzc2lvbl9pZCI6Ijc4ZGQwYzM5MWNjYzk2M2ExOGE2OGQ0YzBkMTMwOTg1IiwiX2NzcmZfdG9rZW4iOiJpcWlKSGg2ZzUyaHNja2d0NitlMmdVMDRWZWlramJneVZpQTlvNXNlUG9JPSJ9--be61a564b466cd8fa498152de3f55f55cbec914a;
+        path=/; secure
+      Etag:
+      - W/"03e1ee9b86895eaef10bde9cce446732"
+      X-Runtime:
+      - '270'
+    body:
+      encoding: UTF-8
+      string: '{"id":"4524114","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"suspended","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1953322-4552442-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1953322-4552442-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":1,"services":[{"external_ip":"services-emea.skytap.com","internal_port":8789,"external_port":8492,"id":"8789"}],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Suspended","vm_id":"4524114","network_id":"2026452","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3491026"},{"text":"skytap / ChangeMe!","id":"3491028"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/03
+        05:57:26 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3287576","publish_set_refs":["https://cloud.skytap.com/configurations/3287576/publish_sets/903650"]}'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:12:34 GMT
+- request:
+    method: get
+    uri: https://martin%40mgoldman.com:TESTPASSWORD@cloud.skytap.com/configurations/3287576/vms/4524114?configuration_url=https://cloud.skytap.com/configurations/3287576
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Feb 2015 02:13:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      Set-Cookie:
+      - _cloud_session=eyJyZWJyYW5kX2N1c3RvbWVyIjo3MDkyLCJ1c2VyIjo5OTczNCwidGltZSI6MTQyMzYyMDgxNCwic2Vzc2lvbl9pZCI6IjY5ZjVkNzdiMjk1YTZlNTlkODBhZjc5N2M0OGNmOTZjIiwiX2NzcmZfdG9rZW4iOiJLRWVhMGlzQ1Q4dGJZdnUvRzlIZk4zNXo4QUJ0d0dsRys5STZXSUJ6MVdJPSJ9--d97578a4b8253fe27dffecffad6b3fb34fc9482e;
+        path=/; secure
+      X-Runtime:
+      - '378'
+      Etag:
+      - W/"999b2302caf501d33f20d0e8ab39aa77"
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+    body:
+      encoding: UTF-8
+      string: '{"id":"4524114","name":"Sharepoint Server 2013 Trial - Windows Server
+        2012 Standard - Eval","runstate":"running","hardware":{"cpus":2,"ram":2048,"svms":2,"guestOS":"windows8srv-64","max_cpus":12,"min_ram":256,"max_ram":131072,"vnc_keymap":null,"uuid":null,"disks":[{"id":"disk-1953322-4552442-scsi-0-0","size":61440,"type":"SCSI","controller":"0","lun":"0"}],"storage":61440,"upgradable":false,"instance_type":null,"time_sync_enabled":true,"copy_paste_enabled":true,"nested_virtualization":false},"error":false,"asset_id":null,"interfaces":[{"id":"nic-1953322-4552442-0","ip":"10.0.0.1","hostname":"2012std","mac":"00:50:56:1D:25:53","services_count":1,"services":[{"external_ip":"services-emea.skytap.com","internal_port":8789,"external_port":8492,"id":"8789"}],"public_ips_count":0,"public_ips":[],"vm_name":"Sharepoint
+        Server 2013 Trial - Windows Server 2012 Standard - Eval","status":"Running","vm_id":"4524114","network_id":"2026452","network_subnet":"10.0.0.0/24","network_type":"automatic","network_name":"Default
+        Network","nic_type":"vmxnet3","promiscuous":false}],"notes":[],"labels":[],"credentials":[{"text":"Administrator
+        / ChangeMe!","id":"3491026"},{"text":"skytap / ChangeMe!","id":"3491028"}],"desktop_resizable":true,"local_mouse_cursor":true,"maintenance_lock_engaged":false,"region_backend":"skytap","created_at":"2015/02/03
+        05:57:26 -0800","can_change_object_state":true,"configuration_url":"https://cloud.skytap.com/configurations/3287576","publish_set_refs":["https://cloud.skytap.com/configurations/3287576/publish_sets/903650"]}'
+    http_version: 
+  recorded_at: Wed, 11 Feb 2015 02:13:35 GMT
+recorded_with: VCR 2.9.3
