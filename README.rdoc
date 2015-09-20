@@ -1,28 +1,7 @@
-== README
+== RcxOrchestrator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This proof-of-concept Rails app works with the RCX Agent to execute batches of commands on those agents and collate the output and return codes of those commands. 
 
-Things you may want to cover:
+RCX Agents can be hardcoded in the app in <tt>app/models/hardcoded_client.rb</tt> for testing only. They can also be loaded in bulk from Skytap or a custom Client class.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This application requires the Sidekiq task queue.
