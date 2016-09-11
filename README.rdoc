@@ -1,6 +1,6 @@
 == RcxOrchestrator
 
-This proof-of-concept Rails app works with the RCX Agent to execute batches of commands on those agents and collate the output and return codes of those commands. 
+This proof-of-concept Rails app works with the [RCX Agent](https://github.com/mhgoldman/RcxAgent) to execute batches of commands on those agents and collate the output and return codes of those commands. 
 
 RCX Agents can be hardcoded in the app in <tt>app/models/hardcoded_client.rb</tt> for testing only. They can also be loaded in bulk from Skytap or a custom Client class.
 
